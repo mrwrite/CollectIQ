@@ -1,0 +1,30 @@
+# Ignore Node modules and Angular build artifacts
+CollectIQApp/node_modules/
+CollectIQApp/dist/
+
+# Angular environment files
+CollectIQApp/src/environments/environment*.ts
+
+# Backend sensitive files
+CollectIQ.Api/appsettings*.json
+CollectIQ.Service/appsettings*.json
+CollectIQ.Tests/appsettings*.json
+
+# Build artifacts
+**/bin/
+**/obj/
+
+# IDE-specific and OS-specific files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Ignore environment variable files
+.env
