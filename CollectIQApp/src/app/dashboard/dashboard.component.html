@@ -1,9 +1,20 @@
-<div class="dashboard-container">
+<mat-sidenav-container class="dashboard-container">
+  <!-- Side Navigation -->
+  <mat-sidenav #sidenav mode="side" opened>
+    <mat-toolbar>Menu</mat-toolbar>
+    <button mat-button (click)="sidenav.close()">Close</button>
+  </mat-sidenav>
+
+  <!-- Main Content -->
+  <mat-sidenav-content>
     <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
       <span>Dashboard</span>
     </mat-toolbar>
-  
-    <!-- Chart section -->
+
+    <!-- Chart Section -->
     <div class="chart-container">
       <ngx-charts-bar-vertical
         [results]="chartData"
@@ -17,11 +28,11 @@
         [yScaleMax]="100">
       </ngx-charts-bar-vertical>
     </div>
-  
-    <!-- Card grid section -->
+
+    <!-- Grid Section -->
     <div class="dashboard-grid">
       <mat-grid-list cols="3" rowHeight="350px" gutterSize="16px">
-        <mat-grid-tile *ngFor="let item of items" (click)="navigateToItemList(item.type)">
+        <mat-grid-tile *ngFor="let item of items">
           <mat-card class="dashboard-card">
             <mat-card-header>
               <mat-card-title>{{ item.type }}</mat-card-title>
@@ -36,5 +47,5 @@
         </mat-grid-tile>
       </mat-grid-list>
     </div>
-  </div>
-  
+  </mat-sidenav-content>
+</mat-sidenav-container>

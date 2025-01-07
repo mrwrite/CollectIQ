@@ -1,31 +1,29 @@
 .dashboard-container {
-    padding: 20px;
-  }
-  
-  .dashboard-grid {
-    margin-top: 20px;
-  }
-  
-  .dashboard-card {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .stats {
-    font-size: 24px;
-    font-weight: bold;
-    color: #3f51b5;
-  }
-  
-  mat-card {
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  
-  mat-card:hover {
-    transform: scale(1.05);
-  }
-  
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-sidenav-container {
+  height: 100vh;
+}
+
+.dashboard-grid {
+  margin-top: 20px;
+  padding: 16px;
+}
+
+.dashboard-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.05);
+}
+
+

@@ -1,9 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { ItemService } from '../services/item.service';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon'; 
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button'
 import { NgxChartsModule, Color, ScaleType } from '@swimlane/ngx-charts';
 import { CommonModule } from '@angular/common';
 
@@ -22,6 +27,10 @@ import { Router } from '@angular/router';
     MatToolbarModule,
     MatTableModule,
     MatGridListModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatButtonModule,
     NgxChartsModule,
   ],
   templateUrl: './dashboard.component.html',
@@ -31,6 +40,8 @@ export class DashboardComponent implements OnInit {
   items: ItemStats[] = [];
   userInfo!: DecodedToken;
   chartData: any[] = [];
+  isSmallScreen = false;
+  gridCols = 3;
   colorScheme: Color = {
     name: 'customScheme',
     selectable: true,
@@ -38,7 +49,9 @@ export class DashboardComponent implements OnInit {
     domain: ['#3f51b5', '#e91e63', '#00bcd4', '#ffeb3b']
   };
 
-  constructor(private itemService: ItemService, private router: Router) {}
+  constructor(private itemService: ItemService, private router: Router
+    , private breakpointObserver: BreakpointObserver
+  ) {}
 
   ngOnInit(): void {
     const token = localStorage.getItem('token');
@@ -48,6 +61,11 @@ export class DashboardComponent implements OnInit {
     this.itemService.getItemsByUserId(this.userInfo.UserId).subscribe(items => {
       this.items = this.groupItemsByType(items);
       this.prepareChartData();
+    });
+
+    this.breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall]).subscribe(result => {
+      this.isSmallScreen = result.matches;
+      this.gridCols = this.isSmallScreen ? 1 : 3;
     });
   }
 

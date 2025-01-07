@@ -1,11 +1,21 @@
 import {
-  DOCUMENT,
-  isPlatformBrowser
+  BreakpointObserver,
+  Platform,
+  _getEventTarget,
+  _getFocusedElementPierceShadowDom,
+  _getShadowRoot,
+  _isTestEnvironment,
+  coerceBooleanProperty,
+  coerceElement,
+  coerceNumberProperty,
+  normalizePassiveListenerOptions
+} from "./chunk-NIXS3MM3.js";
+import {
+  DOCUMENT
 } from "./chunk-YPVQIAJA.js";
 import {
   ANIMATION_MODULE_TYPE,
   APP_ID,
-  CSP_NONCE,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
@@ -22,14 +32,15 @@ import {
   NgZone,
   Optional,
   Output,
-  PLATFORM_ID,
   QueryList,
   Version,
   ViewChild,
   ViewEncapsulation$1,
   afterNextRender,
   booleanAttribute,
+  effect,
   inject,
+  isSignal,
   setClassMetadata,
   ɵɵInputTransformsFeature,
   ɵɵNgOnChangesFeature,
@@ -70,8 +81,6 @@ import {
   Observable,
   Subject,
   Subscription,
-  combineLatest,
-  concat,
   debounceTime,
   distinctUntilChanged,
   filter,
@@ -88,233 +97,9 @@ import {
   __spreadValues
 } from "./chunk-TXDUYLVM.js";
 
-// node_modules/@angular/cdk/fesm2022/platform.mjs
-var hasV8BreakIterator;
-try {
-  hasV8BreakIterator = typeof Intl !== "undefined" && Intl.v8BreakIterator;
-} catch {
-  hasV8BreakIterator = false;
-}
-var Platform = class _Platform {
-  constructor(_platformId) {
-    this._platformId = _platformId;
-    this.isBrowser = this._platformId ? isPlatformBrowser(this._platformId) : typeof document === "object" && !!document;
-    this.EDGE = this.isBrowser && /(edge)/i.test(navigator.userAgent);
-    this.TRIDENT = this.isBrowser && /(msie|trident)/i.test(navigator.userAgent);
-    this.BLINK = this.isBrowser && !!(window.chrome || hasV8BreakIterator) && typeof CSS !== "undefined" && !this.EDGE && !this.TRIDENT;
-    this.WEBKIT = this.isBrowser && /AppleWebKit/i.test(navigator.userAgent) && !this.BLINK && !this.EDGE && !this.TRIDENT;
-    this.IOS = this.isBrowser && /iPad|iPhone|iPod/.test(navigator.userAgent) && !("MSStream" in window);
-    this.FIREFOX = this.isBrowser && /(firefox|minefield)/i.test(navigator.userAgent);
-    this.ANDROID = this.isBrowser && /android/i.test(navigator.userAgent) && !this.TRIDENT;
-    this.SAFARI = this.isBrowser && /safari/i.test(navigator.userAgent) && this.WEBKIT;
-  }
-  static {
-    this.ɵfac = function Platform_Factory(__ngFactoryType__) {
-      return new (__ngFactoryType__ || _Platform)(ɵɵinject(PLATFORM_ID));
-    };
-  }
-  static {
-    this.ɵprov = ɵɵdefineInjectable({
-      token: _Platform,
-      factory: _Platform.ɵfac,
-      providedIn: "root"
-    });
-  }
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(Platform, [{
-    type: Injectable,
-    args: [{
-      providedIn: "root"
-    }]
-  }], () => [{
-    type: Object,
-    decorators: [{
-      type: Inject,
-      args: [PLATFORM_ID]
-    }]
-  }], null);
-})();
-var PlatformModule = class _PlatformModule {
-  static {
-    this.ɵfac = function PlatformModule_Factory(__ngFactoryType__) {
-      return new (__ngFactoryType__ || _PlatformModule)();
-    };
-  }
-  static {
-    this.ɵmod = ɵɵdefineNgModule({
-      type: _PlatformModule
-    });
-  }
-  static {
-    this.ɵinj = ɵɵdefineInjector({});
-  }
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(PlatformModule, [{
-    type: NgModule,
-    args: [{}]
-  }], null, null);
-})();
-var supportedInputTypes;
-var candidateInputTypes = [
-  // `color` must come first. Chrome 56 shows a warning if we change the type to `color` after
-  // first changing it to something else:
-  // The specified value "" does not conform to the required format.
-  // The format is "#rrggbb" where rr, gg, bb are two-digit hexadecimal numbers.
-  "color",
-  "button",
-  "checkbox",
-  "date",
-  "datetime-local",
-  "email",
-  "file",
-  "hidden",
-  "image",
-  "month",
-  "number",
-  "password",
-  "radio",
-  "range",
-  "reset",
-  "search",
-  "submit",
-  "tel",
-  "text",
-  "time",
-  "url",
-  "week"
-];
-function getSupportedInputTypes() {
-  if (supportedInputTypes) {
-    return supportedInputTypes;
-  }
-  if (typeof document !== "object" || !document) {
-    supportedInputTypes = new Set(candidateInputTypes);
-    return supportedInputTypes;
-  }
-  let featureTestInput = document.createElement("input");
-  supportedInputTypes = new Set(candidateInputTypes.filter((value) => {
-    featureTestInput.setAttribute("type", value);
-    return featureTestInput.type === value;
-  }));
-  return supportedInputTypes;
-}
-var supportsPassiveEvents;
-function supportsPassiveEventListeners() {
-  if (supportsPassiveEvents == null && typeof window !== "undefined") {
-    try {
-      window.addEventListener("test", null, Object.defineProperty({}, "passive", {
-        get: () => supportsPassiveEvents = true
-      }));
-    } finally {
-      supportsPassiveEvents = supportsPassiveEvents || false;
-    }
-  }
-  return supportsPassiveEvents;
-}
-function normalizePassiveListenerOptions(options) {
-  return supportsPassiveEventListeners() ? options : !!options.capture;
-}
-var RtlScrollAxisType;
-(function(RtlScrollAxisType2) {
-  RtlScrollAxisType2[RtlScrollAxisType2["NORMAL"] = 0] = "NORMAL";
-  RtlScrollAxisType2[RtlScrollAxisType2["NEGATED"] = 1] = "NEGATED";
-  RtlScrollAxisType2[RtlScrollAxisType2["INVERTED"] = 2] = "INVERTED";
-})(RtlScrollAxisType || (RtlScrollAxisType = {}));
-var rtlScrollAxisType;
-var scrollBehaviorSupported;
-function supportsScrollBehavior() {
-  if (scrollBehaviorSupported == null) {
-    if (typeof document !== "object" || !document || typeof Element !== "function" || !Element) {
-      scrollBehaviorSupported = false;
-      return scrollBehaviorSupported;
-    }
-    if ("scrollBehavior" in document.documentElement.style) {
-      scrollBehaviorSupported = true;
-    } else {
-      const scrollToFunction = Element.prototype.scrollTo;
-      if (scrollToFunction) {
-        scrollBehaviorSupported = !/\{\s*\[native code\]\s*\}/.test(scrollToFunction.toString());
-      } else {
-        scrollBehaviorSupported = false;
-      }
-    }
-  }
-  return scrollBehaviorSupported;
-}
-function getRtlScrollAxisType() {
-  if (typeof document !== "object" || !document) {
-    return RtlScrollAxisType.NORMAL;
-  }
-  if (rtlScrollAxisType == null) {
-    const scrollContainer = document.createElement("div");
-    const containerStyle = scrollContainer.style;
-    scrollContainer.dir = "rtl";
-    containerStyle.width = "1px";
-    containerStyle.overflow = "auto";
-    containerStyle.visibility = "hidden";
-    containerStyle.pointerEvents = "none";
-    containerStyle.position = "absolute";
-    const content = document.createElement("div");
-    const contentStyle = content.style;
-    contentStyle.width = "2px";
-    contentStyle.height = "1px";
-    scrollContainer.appendChild(content);
-    document.body.appendChild(scrollContainer);
-    rtlScrollAxisType = RtlScrollAxisType.NORMAL;
-    if (scrollContainer.scrollLeft === 0) {
-      scrollContainer.scrollLeft = 1;
-      rtlScrollAxisType = scrollContainer.scrollLeft === 0 ? RtlScrollAxisType.NEGATED : RtlScrollAxisType.INVERTED;
-    }
-    scrollContainer.remove();
-  }
-  return rtlScrollAxisType;
-}
-var shadowDomIsSupported;
-function _supportsShadowDom() {
-  if (shadowDomIsSupported == null) {
-    const head = typeof document !== "undefined" ? document.head : null;
-    shadowDomIsSupported = !!(head && (head.createShadowRoot || head.attachShadow));
-  }
-  return shadowDomIsSupported;
-}
-function _getShadowRoot(element) {
-  if (_supportsShadowDom()) {
-    const rootNode = element.getRootNode ? element.getRootNode() : null;
-    if (typeof ShadowRoot !== "undefined" && ShadowRoot && rootNode instanceof ShadowRoot) {
-      return rootNode;
-    }
-  }
-  return null;
-}
-function _getFocusedElementPierceShadowDom() {
-  let activeElement = typeof document !== "undefined" && document ? document.activeElement : null;
-  while (activeElement && activeElement.shadowRoot) {
-    const newActiveElement = activeElement.shadowRoot.activeElement;
-    if (newActiveElement === activeElement) {
-      break;
-    } else {
-      activeElement = newActiveElement;
-    }
-  }
-  return activeElement;
-}
-function _getEventTarget(event) {
-  return event.composedPath ? event.composedPath()[0] : event.target;
-}
-function _isTestEnvironment() {
-  return (
-    // @ts-ignore
-    typeof __karma__ !== "undefined" && !!__karma__ || // @ts-ignore
-    typeof jasmine !== "undefined" && !!jasmine || // @ts-ignore
-    typeof jest !== "undefined" && !!jest || // @ts-ignore
-    typeof Mocha !== "undefined" && !!Mocha
-  );
-}
-
 // node_modules/@angular/cdk/fesm2022/keycodes.mjs
 var BACKSPACE = 8;
+var TAB = 9;
 var ENTER = 13;
 var SHIFT = 16;
 var CONTROL = 17;
@@ -348,45 +133,6 @@ function coerceObservable(data) {
     return of(data);
   }
   return data;
-}
-
-// node_modules/@angular/cdk/fesm2022/coercion.mjs
-function coerceBooleanProperty(value) {
-  return value != null && `${value}` !== "false";
-}
-function coerceNumberProperty(value, fallbackValue = 0) {
-  if (_isNumberValue(value)) {
-    return Number(value);
-  }
-  return arguments.length === 2 ? fallbackValue : 0;
-}
-function _isNumberValue(value) {
-  return !isNaN(parseFloat(value)) && !isNaN(Number(value));
-}
-function coerceArray(value) {
-  return Array.isArray(value) ? value : [value];
-}
-function coerceCssPixelValue(value) {
-  if (value == null) {
-    return "";
-  }
-  return typeof value === "string" ? value : `${value}px`;
-}
-function coerceElement(elementOrRef) {
-  return elementOrRef instanceof ElementRef ? elementOrRef.nativeElement : elementOrRef;
-}
-function coerceStringArray(value, separator = /\s+/) {
-  const result = [];
-  if (value != null) {
-    const sourceValues = Array.isArray(value) ? value : `${value}`.split(separator);
-    for (const sourceValue of sourceValues) {
-      const trimmedString = `${sourceValue}`.trim();
-      if (trimmedString) {
-        result.push(trimmedString);
-      }
-    }
-  }
-  return result;
 }
 
 // node_modules/@angular/cdk/fesm2022/observers.mjs
@@ -657,215 +403,6 @@ var ObserversModule = class _ObserversModule {
     }]
   }], null, null);
 })();
-
-// node_modules/@angular/cdk/fesm2022/layout.mjs
-var LayoutModule = class _LayoutModule {
-  static {
-    this.ɵfac = function LayoutModule_Factory(__ngFactoryType__) {
-      return new (__ngFactoryType__ || _LayoutModule)();
-    };
-  }
-  static {
-    this.ɵmod = ɵɵdefineNgModule({
-      type: _LayoutModule
-    });
-  }
-  static {
-    this.ɵinj = ɵɵdefineInjector({});
-  }
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(LayoutModule, [{
-    type: NgModule,
-    args: [{}]
-  }], null, null);
-})();
-var mediaQueriesForWebkitCompatibility = /* @__PURE__ */ new Set();
-var mediaQueryStyleNode;
-var MediaMatcher = class _MediaMatcher {
-  constructor(_platform, _nonce) {
-    this._platform = _platform;
-    this._nonce = _nonce;
-    this._matchMedia = this._platform.isBrowser && window.matchMedia ? (
-      // matchMedia is bound to the window scope intentionally as it is an illegal invocation to
-      // call it from a different scope.
-      window.matchMedia.bind(window)
-    ) : noopMatchMedia;
-  }
-  /**
-   * Evaluates the given media query and returns the native MediaQueryList from which results
-   * can be retrieved.
-   * Confirms the layout engine will trigger for the selector query provided and returns the
-   * MediaQueryList for the query provided.
-   */
-  matchMedia(query) {
-    if (this._platform.WEBKIT || this._platform.BLINK) {
-      createEmptyStyleRule(query, this._nonce);
-    }
-    return this._matchMedia(query);
-  }
-  static {
-    this.ɵfac = function MediaMatcher_Factory(__ngFactoryType__) {
-      return new (__ngFactoryType__ || _MediaMatcher)(ɵɵinject(Platform), ɵɵinject(CSP_NONCE, 8));
-    };
-  }
-  static {
-    this.ɵprov = ɵɵdefineInjectable({
-      token: _MediaMatcher,
-      factory: _MediaMatcher.ɵfac,
-      providedIn: "root"
-    });
-  }
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MediaMatcher, [{
-    type: Injectable,
-    args: [{
-      providedIn: "root"
-    }]
-  }], () => [{
-    type: Platform
-  }, {
-    type: void 0,
-    decorators: [{
-      type: Optional
-    }, {
-      type: Inject,
-      args: [CSP_NONCE]
-    }]
-  }], null);
-})();
-function createEmptyStyleRule(query, nonce) {
-  if (mediaQueriesForWebkitCompatibility.has(query)) {
-    return;
-  }
-  try {
-    if (!mediaQueryStyleNode) {
-      mediaQueryStyleNode = document.createElement("style");
-      if (nonce) {
-        mediaQueryStyleNode.setAttribute("nonce", nonce);
-      }
-      mediaQueryStyleNode.setAttribute("type", "text/css");
-      document.head.appendChild(mediaQueryStyleNode);
-    }
-    if (mediaQueryStyleNode.sheet) {
-      mediaQueryStyleNode.sheet.insertRule(`@media ${query} {body{ }}`, 0);
-      mediaQueriesForWebkitCompatibility.add(query);
-    }
-  } catch (e) {
-    console.error(e);
-  }
-}
-function noopMatchMedia(query) {
-  return {
-    matches: query === "all" || query === "",
-    media: query,
-    addListener: () => {
-    },
-    removeListener: () => {
-    }
-  };
-}
-var BreakpointObserver = class _BreakpointObserver {
-  constructor(_mediaMatcher, _zone) {
-    this._mediaMatcher = _mediaMatcher;
-    this._zone = _zone;
-    this._queries = /* @__PURE__ */ new Map();
-    this._destroySubject = new Subject();
-  }
-  /** Completes the active subject, signalling to all other observables to complete. */
-  ngOnDestroy() {
-    this._destroySubject.next();
-    this._destroySubject.complete();
-  }
-  /**
-   * Whether one or more media queries match the current viewport size.
-   * @param value One or more media queries to check.
-   * @returns Whether any of the media queries match.
-   */
-  isMatched(value) {
-    const queries = splitQueries(coerceArray(value));
-    return queries.some((mediaQuery) => this._registerQuery(mediaQuery).mql.matches);
-  }
-  /**
-   * Gets an observable of results for the given queries that will emit new results for any changes
-   * in matching of the given queries.
-   * @param value One or more media queries to check.
-   * @returns A stream of matches for the given queries.
-   */
-  observe(value) {
-    const queries = splitQueries(coerceArray(value));
-    const observables = queries.map((query) => this._registerQuery(query).observable);
-    let stateObservable = combineLatest(observables);
-    stateObservable = concat(stateObservable.pipe(take(1)), stateObservable.pipe(skip(1), debounceTime(0)));
-    return stateObservable.pipe(map((breakpointStates) => {
-      const response = {
-        matches: false,
-        breakpoints: {}
-      };
-      breakpointStates.forEach(({
-        matches,
-        query
-      }) => {
-        response.matches = response.matches || matches;
-        response.breakpoints[query] = matches;
-      });
-      return response;
-    }));
-  }
-  /** Registers a specific query to be listened for. */
-  _registerQuery(query) {
-    if (this._queries.has(query)) {
-      return this._queries.get(query);
-    }
-    const mql = this._mediaMatcher.matchMedia(query);
-    const queryObservable = new Observable((observer) => {
-      const handler = (e) => this._zone.run(() => observer.next(e));
-      mql.addListener(handler);
-      return () => {
-        mql.removeListener(handler);
-      };
-    }).pipe(startWith(mql), map(({
-      matches
-    }) => ({
-      query,
-      matches
-    })), takeUntil(this._destroySubject));
-    const output = {
-      observable: queryObservable,
-      mql
-    };
-    this._queries.set(query, output);
-    return output;
-  }
-  static {
-    this.ɵfac = function BreakpointObserver_Factory(__ngFactoryType__) {
-      return new (__ngFactoryType__ || _BreakpointObserver)(ɵɵinject(MediaMatcher), ɵɵinject(NgZone));
-    };
-  }
-  static {
-    this.ɵprov = ɵɵdefineInjectable({
-      token: _BreakpointObserver,
-      factory: _BreakpointObserver.ɵfac,
-      providedIn: "root"
-    });
-  }
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(BreakpointObserver, [{
-    type: Injectable,
-    args: [{
-      providedIn: "root"
-    }]
-  }], () => [{
-    type: MediaMatcher
-  }, {
-    type: NgZone
-  }], null);
-})();
-function splitQueries(queries) {
-  return queries.map((query) => query.split(",")).reduce((a1, a2) => a1.concat(a2)).map((query) => query.trim());
-}
 
 // node_modules/@angular/cdk/fesm2022/a11y.mjs
 var ID_DELIMITER = " ";
@@ -1138,6 +675,349 @@ var Typeahead = class {
       }
       this._pressedLetters = [];
     });
+  }
+};
+var ListKeyManager = class {
+  constructor(_items, injector) {
+    this._items = _items;
+    this._activeItemIndex = -1;
+    this._activeItem = null;
+    this._wrap = false;
+    this._typeaheadSubscription = Subscription.EMPTY;
+    this._vertical = true;
+    this._allowedModifierKeys = [];
+    this._homeAndEnd = false;
+    this._pageUpAndDown = {
+      enabled: false,
+      delta: 10
+    };
+    this._skipPredicateFn = (item) => item.disabled;
+    this.tabOut = new Subject();
+    this.change = new Subject();
+    if (_items instanceof QueryList) {
+      this._itemChangesSubscription = _items.changes.subscribe((newItems) => this._itemsChanged(newItems.toArray()));
+    } else if (isSignal(_items)) {
+      if (!injector && (typeof ngDevMode === "undefined" || ngDevMode)) {
+        throw new Error("ListKeyManager constructed with a signal must receive an injector");
+      }
+      this._effectRef = effect(() => this._itemsChanged(_items()), {
+        injector
+      });
+    }
+  }
+  /**
+   * Sets the predicate function that determines which items should be skipped by the
+   * list key manager.
+   * @param predicate Function that determines whether the given item should be skipped.
+   */
+  skipPredicate(predicate) {
+    this._skipPredicateFn = predicate;
+    return this;
+  }
+  /**
+   * Configures wrapping mode, which determines whether the active item will wrap to
+   * the other end of list when there are no more items in the given direction.
+   * @param shouldWrap Whether the list should wrap when reaching the end.
+   */
+  withWrap(shouldWrap = true) {
+    this._wrap = shouldWrap;
+    return this;
+  }
+  /**
+   * Configures whether the key manager should be able to move the selection vertically.
+   * @param enabled Whether vertical selection should be enabled.
+   */
+  withVerticalOrientation(enabled = true) {
+    this._vertical = enabled;
+    return this;
+  }
+  /**
+   * Configures the key manager to move the selection horizontally.
+   * Passing in `null` will disable horizontal movement.
+   * @param direction Direction in which the selection can be moved.
+   */
+  withHorizontalOrientation(direction) {
+    this._horizontal = direction;
+    return this;
+  }
+  /**
+   * Modifier keys which are allowed to be held down and whose default actions will be prevented
+   * as the user is pressing the arrow keys. Defaults to not allowing any modifier keys.
+   */
+  withAllowedModifierKeys(keys) {
+    this._allowedModifierKeys = keys;
+    return this;
+  }
+  /**
+   * Turns on typeahead mode which allows users to set the active item by typing.
+   * @param debounceInterval Time to wait after the last keystroke before setting the active item.
+   */
+  withTypeAhead(debounceInterval = 200) {
+    if (typeof ngDevMode === "undefined" || ngDevMode) {
+      const items2 = this._getItemsArray();
+      if (items2.length > 0 && items2.some((item) => typeof item.getLabel !== "function")) {
+        throw Error("ListKeyManager items in typeahead mode must implement the `getLabel` method.");
+      }
+    }
+    this._typeaheadSubscription.unsubscribe();
+    const items = this._getItemsArray();
+    this._typeahead = new Typeahead(items, {
+      debounceInterval: typeof debounceInterval === "number" ? debounceInterval : void 0,
+      skipPredicate: (item) => this._skipPredicateFn(item)
+    });
+    this._typeaheadSubscription = this._typeahead.selectedItem.subscribe((item) => {
+      this.setActiveItem(item);
+    });
+    return this;
+  }
+  /** Cancels the current typeahead sequence. */
+  cancelTypeahead() {
+    this._typeahead?.reset();
+    return this;
+  }
+  /**
+   * Configures the key manager to activate the first and last items
+   * respectively when the Home or End key is pressed.
+   * @param enabled Whether pressing the Home or End key activates the first/last item.
+   */
+  withHomeAndEnd(enabled = true) {
+    this._homeAndEnd = enabled;
+    return this;
+  }
+  /**
+   * Configures the key manager to activate every 10th, configured or first/last element in up/down direction
+   * respectively when the Page-Up or Page-Down key is pressed.
+   * @param enabled Whether pressing the Page-Up or Page-Down key activates the first/last item.
+   * @param delta Whether pressing the Home or End key activates the first/last item.
+   */
+  withPageUpDown(enabled = true, delta = 10) {
+    this._pageUpAndDown = {
+      enabled,
+      delta
+    };
+    return this;
+  }
+  setActiveItem(item) {
+    const previousActiveItem = this._activeItem;
+    this.updateActiveItem(item);
+    if (this._activeItem !== previousActiveItem) {
+      this.change.next(this._activeItemIndex);
+    }
+  }
+  /**
+   * Sets the active item depending on the key event passed in.
+   * @param event Keyboard event to be used for determining which element should be active.
+   */
+  onKeydown(event) {
+    const keyCode = event.keyCode;
+    const modifiers = ["altKey", "ctrlKey", "metaKey", "shiftKey"];
+    const isModifierAllowed = modifiers.every((modifier) => {
+      return !event[modifier] || this._allowedModifierKeys.indexOf(modifier) > -1;
+    });
+    switch (keyCode) {
+      case TAB:
+        this.tabOut.next();
+        return;
+      case DOWN_ARROW:
+        if (this._vertical && isModifierAllowed) {
+          this.setNextItemActive();
+          break;
+        } else {
+          return;
+        }
+      case UP_ARROW:
+        if (this._vertical && isModifierAllowed) {
+          this.setPreviousItemActive();
+          break;
+        } else {
+          return;
+        }
+      case RIGHT_ARROW:
+        if (this._horizontal && isModifierAllowed) {
+          this._horizontal === "rtl" ? this.setPreviousItemActive() : this.setNextItemActive();
+          break;
+        } else {
+          return;
+        }
+      case LEFT_ARROW:
+        if (this._horizontal && isModifierAllowed) {
+          this._horizontal === "rtl" ? this.setNextItemActive() : this.setPreviousItemActive();
+          break;
+        } else {
+          return;
+        }
+      case HOME:
+        if (this._homeAndEnd && isModifierAllowed) {
+          this.setFirstItemActive();
+          break;
+        } else {
+          return;
+        }
+      case END:
+        if (this._homeAndEnd && isModifierAllowed) {
+          this.setLastItemActive();
+          break;
+        } else {
+          return;
+        }
+      case PAGE_UP:
+        if (this._pageUpAndDown.enabled && isModifierAllowed) {
+          const targetIndex = this._activeItemIndex - this._pageUpAndDown.delta;
+          this._setActiveItemByIndex(targetIndex > 0 ? targetIndex : 0, 1);
+          break;
+        } else {
+          return;
+        }
+      case PAGE_DOWN:
+        if (this._pageUpAndDown.enabled && isModifierAllowed) {
+          const targetIndex = this._activeItemIndex + this._pageUpAndDown.delta;
+          const itemsLength = this._getItemsArray().length;
+          this._setActiveItemByIndex(targetIndex < itemsLength ? targetIndex : itemsLength - 1, -1);
+          break;
+        } else {
+          return;
+        }
+      default:
+        if (isModifierAllowed || hasModifierKey(event, "shiftKey")) {
+          this._typeahead?.handleKey(event);
+        }
+        return;
+    }
+    this._typeahead?.reset();
+    event.preventDefault();
+  }
+  /** Index of the currently active item. */
+  get activeItemIndex() {
+    return this._activeItemIndex;
+  }
+  /** The active item. */
+  get activeItem() {
+    return this._activeItem;
+  }
+  /** Gets whether the user is currently typing into the manager using the typeahead feature. */
+  isTyping() {
+    return !!this._typeahead && this._typeahead.isTyping();
+  }
+  /** Sets the active item to the first enabled item in the list. */
+  setFirstItemActive() {
+    this._setActiveItemByIndex(0, 1);
+  }
+  /** Sets the active item to the last enabled item in the list. */
+  setLastItemActive() {
+    this._setActiveItemByIndex(this._getItemsArray().length - 1, -1);
+  }
+  /** Sets the active item to the next enabled item in the list. */
+  setNextItemActive() {
+    this._activeItemIndex < 0 ? this.setFirstItemActive() : this._setActiveItemByDelta(1);
+  }
+  /** Sets the active item to a previous enabled item in the list. */
+  setPreviousItemActive() {
+    this._activeItemIndex < 0 && this._wrap ? this.setLastItemActive() : this._setActiveItemByDelta(-1);
+  }
+  updateActiveItem(item) {
+    const itemArray = this._getItemsArray();
+    const index = typeof item === "number" ? item : itemArray.indexOf(item);
+    const activeItem = itemArray[index];
+    this._activeItem = activeItem == null ? null : activeItem;
+    this._activeItemIndex = index;
+    this._typeahead?.setCurrentSelectedItemIndex(index);
+  }
+  /** Cleans up the key manager. */
+  destroy() {
+    this._typeaheadSubscription.unsubscribe();
+    this._itemChangesSubscription?.unsubscribe();
+    this._effectRef?.destroy();
+    this._typeahead?.destroy();
+    this.tabOut.complete();
+    this.change.complete();
+  }
+  /**
+   * This method sets the active item, given a list of items and the delta between the
+   * currently active item and the new active item. It will calculate differently
+   * depending on whether wrap mode is turned on.
+   */
+  _setActiveItemByDelta(delta) {
+    this._wrap ? this._setActiveInWrapMode(delta) : this._setActiveInDefaultMode(delta);
+  }
+  /**
+   * Sets the active item properly given "wrap" mode. In other words, it will continue to move
+   * down the list until it finds an item that is not disabled, and it will wrap if it
+   * encounters either end of the list.
+   */
+  _setActiveInWrapMode(delta) {
+    const items = this._getItemsArray();
+    for (let i = 1; i <= items.length; i++) {
+      const index = (this._activeItemIndex + delta * i + items.length) % items.length;
+      const item = items[index];
+      if (!this._skipPredicateFn(item)) {
+        this.setActiveItem(index);
+        return;
+      }
+    }
+  }
+  /**
+   * Sets the active item properly given the default mode. In other words, it will
+   * continue to move down the list until it finds an item that is not disabled. If
+   * it encounters either end of the list, it will stop and not wrap.
+   */
+  _setActiveInDefaultMode(delta) {
+    this._setActiveItemByIndex(this._activeItemIndex + delta, delta);
+  }
+  /**
+   * Sets the active item to the first enabled item starting at the index specified. If the
+   * item is disabled, it will move in the fallbackDelta direction until it either
+   * finds an enabled item or encounters the end of the list.
+   */
+  _setActiveItemByIndex(index, fallbackDelta) {
+    const items = this._getItemsArray();
+    if (!items[index]) {
+      return;
+    }
+    while (this._skipPredicateFn(items[index])) {
+      index += fallbackDelta;
+      if (!items[index]) {
+        return;
+      }
+    }
+    this.setActiveItem(index);
+  }
+  /** Returns the items as an array. */
+  _getItemsArray() {
+    if (isSignal(this._items)) {
+      return this._items();
+    }
+    return this._items instanceof QueryList ? this._items.toArray() : this._items;
+  }
+  /** Callback for when the items have changed. */
+  _itemsChanged(newItems) {
+    this._typeahead?.setItems(newItems);
+    if (this._activeItem) {
+      const newIndex = newItems.indexOf(this._activeItem);
+      if (newIndex > -1 && newIndex !== this._activeItemIndex) {
+        this._activeItemIndex = newIndex;
+        this._typeahead?.setCurrentSelectedItemIndex(newIndex);
+      }
+    }
+  }
+};
+var FocusKeyManager = class extends ListKeyManager {
+  constructor() {
+    super(...arguments);
+    this._origin = "program";
+  }
+  /**
+   * Sets the focus origin that will be passed in to the items for any subsequent `focus` calls.
+   * @param origin Focus origin to be used when focusing items.
+   */
+  setFocusOrigin(origin) {
+    this._origin = origin;
+    return this;
+  }
+  setActiveItem(item) {
+    super.setActiveItem(item);
+    if (this.activeItem) {
+      this.activeItem.focus(this._origin);
+    }
   }
 };
 var TreeKeyManager = class {
@@ -5350,22 +5230,6 @@ var _MatInternalFormField = class __MatInternalFormField {
 })();
 
 export {
-  coerceBooleanProperty,
-  coerceNumberProperty,
-  _isNumberValue,
-  coerceArray,
-  coerceCssPixelValue,
-  coerceElement,
-  coerceStringArray,
-  Platform,
-  getSupportedInputTypes,
-  normalizePassiveListenerOptions,
-  RtlScrollAxisType,
-  supportsScrollBehavior,
-  getRtlScrollAxisType,
-  _getFocusedElementPierceShadowDom,
-  _getEventTarget,
-  _isTestEnvironment,
   BACKSPACE,
   ENTER,
   ESCAPE,
@@ -5378,8 +5242,11 @@ export {
   UP_ARROW,
   RIGHT_ARROW,
   DOWN_ARROW,
+  A,
   hasModifierKey,
+  CdkObserveContent,
   ObserversModule,
+  FocusKeyManager,
   InteractivityChecker,
   FocusTrapFactory,
   CdkTrapFocus,
@@ -5434,4 +5301,4 @@ export {
   MatRippleLoader,
   _MatInternalFormField
 };
-//# sourceMappingURL=chunk-4CMIJK26.js.map
+//# sourceMappingURL=chunk-GZAEBDCO.js.map
