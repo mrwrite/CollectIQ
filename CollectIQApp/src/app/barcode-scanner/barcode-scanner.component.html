@@ -1,0 +1,16 @@
+<div class="scanner-container">
+    <video #scannerPreview width="100%" height="100%" autoplay></video>
+    <div class="overlay">
+        <div class="bracket-box">
+             <!-- Brackets -->
+      <div class="corner top-left"></div>
+      <div class="corner top-right"></div>
+      <div class="corner bottom-left"></div>
+      <div class="corner bottom-right"></div>
+      <!-- Instruction Text -->
+      <p>Align the barcode within the brackets</p>
+        </div>
+    </div>    
+    <button mat-raised-button color="primary" (click)="stopScanner()">Stop Scanning</button>
+</div>
+  

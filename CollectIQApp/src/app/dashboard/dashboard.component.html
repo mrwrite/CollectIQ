@@ -1,0 +1,40 @@
+<div class="dashboard-container">
+    <mat-toolbar color="primary">
+      <span>Dashboard</span>
+    </mat-toolbar>
+  
+    <!-- Chart section -->
+    <div class="chart-container">
+      <ngx-charts-bar-vertical
+        [results]="chartData"
+        [scheme]="colorScheme"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="false"
+        [showDataLabel]="true"
+        [barPadding]="8"
+        [animations]="true"
+        [yScaleMax]="100">
+      </ngx-charts-bar-vertical>
+    </div>
+  
+    <!-- Card grid section -->
+    <div class="dashboard-grid">
+      <mat-grid-list cols="3" rowHeight="350px" gutterSize="16px">
+        <mat-grid-tile *ngFor="let item of items" (click)="navigateToItemList(item.type)">
+          <mat-card class="dashboard-card">
+            <mat-card-header>
+              <mat-card-title>{{ item.type }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="stats">
+                <h2>{{ item.count }}</h2>
+                <p>Total Items</p>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+  

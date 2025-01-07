@@ -1,0 +1,43 @@
+.item-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .item-card {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
+  }
+  
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .add-item-button {
+    background-color: #4CAF50; /* Customize the color to suit your theme */
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .add-item-button:hover {
+    background-color: #45a049; /* Slightly darker shade for hover effect */
+  }
+  
+  .spacer {
+    flex: 1;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  .styled-table {
+    width: 100%;
+  }
+  

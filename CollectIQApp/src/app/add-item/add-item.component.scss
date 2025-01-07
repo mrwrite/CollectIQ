@@ -1,0 +1,11 @@
+/* add-item.component.scss */
+.form-row {
+    display: flex;
+    gap: 16px; /* space between fields */
+    margin-bottom: 16px; /* space between rows */
+  }
+  
+  .form-field {
+    flex: 1; /* make fields evenly spaced */
+  }
+  
