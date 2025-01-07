@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollectIQ.Tests", "CollectIQ.Tests\CollectIQ.Tests.csproj", "{FE90C23B-569D-4153-9340-45BE69BF655C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollectIQ.Core", "CollectIQ.Core\CollectIQ.Core.csproj", "{4B6AA6B8-278B-484E-AA17-F5BDC9E064E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollectIQ.Repo", "CollectIQ.Repo\CollectIQ.Repo.csproj", "{7C278AAE-4CDF-44E7-93D8-C4ACD9D034F4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4B6AA6B8-278B-484E-AA17-F5BDC9E064E6} = {4B6AA6B8-278B-484E-AA17-F5BDC9E064E6}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollectIQ.Service", "CollectIQ.Service\CollectIQ.Service.csproj", "{13ABAA49-B78B-4B4C-BCCF-5DDAC3512011}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7C278AAE-4CDF-44E7-93D8-C4ACD9D034F4} = {7C278AAE-4CDF-44E7-93D8-C4ACD9D034F4}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectIQ.Api", "CollectIQ.Api\CollectIQ.Api.csproj", "{CA99582C-BBB4-4C23-A03D-E2E1B0A517B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE90C23B-569D-4153-9340-45BE69BF655C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE90C23B-569D-4153-9340-45BE69BF655C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE90C23B-569D-4153-9340-45BE69BF655C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE90C23B-569D-4153-9340-45BE69BF655C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B6AA6B8-278B-484E-AA17-F5BDC9E064E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B6AA6B8-278B-484E-AA17-F5BDC9E064E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B6AA6B8-278B-484E-AA17-F5BDC9E064E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B6AA6B8-278B-484E-AA17-F5BDC9E064E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C278AAE-4CDF-44E7-93D8-C4ACD9D034F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C278AAE-4CDF-44E7-93D8-C4ACD9D034F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C278AAE-4CDF-44E7-93D8-C4ACD9D034F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C278AAE-4CDF-44E7-93D8-C4ACD9D034F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13ABAA49-B78B-4B4C-BCCF-5DDAC3512011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13ABAA49-B78B-4B4C-BCCF-5DDAC3512011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13ABAA49-B78B-4B4C-BCCF-5DDAC3512011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13ABAA49-B78B-4B4C-BCCF-5DDAC3512011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA99582C-BBB4-4C23-A03D-E2E1B0A517B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA99582C-BBB4-4C23-A03D-E2E1B0A517B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA99582C-BBB4-4C23-A03D-E2E1B0A517B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA99582C-BBB4-4C23-A03D-E2E1B0A517B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BE6704C-4F24-4EF4-A711-EA9DC972C453}
+	EndGlobalSection
+EndGlobal
