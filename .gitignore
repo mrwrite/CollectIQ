@@ -16,3 +16,4 @@ CollectIQ.Tests/bin/
 .env
 .DS_Store
 *.log
+/CollectIQApp/.angular/cache
