@@ -8,6 +8,6 @@ export class Item {
     serialNumber!: string;
     imageUrl!: string;
     itemTypeName!: string;  
-    
+    itemTypeId!: string;
   }
   

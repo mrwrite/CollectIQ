@@ -5,6 +5,7 @@ import { environment } from '../../environments/environment';
 import { Item } from '../models/item.model';
 import { CreateItemDto } from '../models/create-item.model';
 import * as changeCase from 'change-case-object';
+import { A11yModule } from '@angular/cdk/a11y';
 
 @Injectable({
   providedIn: 'root'
@@ -39,5 +40,9 @@ export class ItemService {
         .set('ean', barcode);
 
         return this.http.get<any>(this.barcodeApiUrl, { params });
+    }
+
+    deleteItem(itemId: string): Observable<any> {
+      return this.http.delete<any>(`${this.apiUrl}/${itemId}`);
     }
 }

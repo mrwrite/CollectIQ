@@ -4,7 +4,7 @@
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-      <a mat-list-item routerLink="/dashboard/items" routerLinkActive="active">Items</a>
+      <a mat-list-item routerLink="/dashboard/user-items-list" routerLinkActive="active">Items</a>
       <a mat-list-item routerLink="/dashboard/users" routerLinkActive="active">Users</a>
       <a mat-list-item routerLink="/dashboard/settings" routerLinkActive="active">Settings</a>
     </mat-nav-list>
@@ -17,41 +17,9 @@
       <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
-      <span>Dashboard</span>
+      <span>Collect.iq</span>
     </mat-toolbar>
 
-    <!-- Chart Section -->
-    <div class="chart-container">
-      <ngx-charts-bar-vertical
-        [results]="chartData"
-        [scheme]="colorScheme"
-        [xAxis]="true"
-        [yAxis]="true"
-        [legend]="false"
-        [showDataLabel]="true"
-        [barPadding]="8"
-        [animations]="true"
-        [yScaleMax]="100">
-      </ngx-charts-bar-vertical>
-    </div>
-
-    <!-- Grid Section -->
-    <div class="dashboard-grid">
-      <mat-grid-list cols="3" rowHeight="350px" gutterSize="16px">
-        <mat-grid-tile *ngFor="let item of items" (click)="navigateToItemList(item.type)">
-          <mat-card class="dashboard-card">
-            <mat-card-header>
-              <mat-card-title>{{ item.type }}</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-              <div class="stats">
-                <h2>{{ item.count }}</h2>
-                <p>Total Items</p>
-              </div>
-            </mat-card-content>
-          </mat-card>
-        </mat-grid-tile>
-      </mat-grid-list>
-    </div>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

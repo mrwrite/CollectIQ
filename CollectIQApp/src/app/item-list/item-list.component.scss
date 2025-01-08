@@ -41,3 +41,25 @@
     width: 100%;
   }
   
+  .description-text {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;    
+    max-width: 80px;
+    cursor: pointer;
+  }
+
+  .fragrance-notes-text{
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 80px;
+    cursor: pointer;
+  }
+  
+  .mat-tooltip {
+    white-space: pre-wrap; /* Allow multi-line tooltips if the description is long */
+  }
+  

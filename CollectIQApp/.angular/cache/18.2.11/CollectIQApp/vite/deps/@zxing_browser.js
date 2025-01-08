@@ -1,6 +1,6 @@
 import "./chunk-TXDUYLVM.js";
 
-// node_modules/ts-custom-error/dist/custom-error.mjs
+// ../../../node_modules/ts-custom-error/dist/custom-error.mjs
 function fixProto(target, prototype) {
   var setPrototypeOf = Object.setPrototypeOf;
   setPrototypeOf ? setPrototypeOf(target, prototype) : target.__proto__ = prototype;
@@ -51,7 +51,7 @@ var CustomError = function(_super) {
   return CustomError2;
 }(Error);
 
-// node_modules/@zxing/library/esm/core/Exception.js
+// ../../../node_modules/@zxing/library/esm/core/Exception.js
 var __extends2 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -93,7 +93,7 @@ var Exception = (
 );
 var Exception_default = Exception;
 
-// node_modules/@zxing/library/esm/core/ArgumentException.js
+// ../../../node_modules/@zxing/library/esm/core/ArgumentException.js
 var __extends3 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -126,7 +126,7 @@ var ArgumentException = (
 );
 var ArgumentException_default = ArgumentException;
 
-// node_modules/@zxing/library/esm/core/IllegalArgumentException.js
+// ../../../node_modules/@zxing/library/esm/core/IllegalArgumentException.js
 var __extends4 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -159,7 +159,7 @@ var IllegalArgumentException = (
 );
 var IllegalArgumentException_default = IllegalArgumentException;
 
-// node_modules/@zxing/library/esm/core/BinaryBitmap.js
+// ../../../node_modules/@zxing/library/esm/core/BinaryBitmap.js
 var BinaryBitmap = (
   /** @class */
   function() {
@@ -214,7 +214,7 @@ var BinaryBitmap = (
 );
 var BinaryBitmap_default = BinaryBitmap;
 
-// node_modules/@zxing/library/esm/core/ChecksumException.js
+// ../../../node_modules/@zxing/library/esm/core/ChecksumException.js
 var __extends5 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -250,7 +250,7 @@ var ChecksumException = (
 );
 var ChecksumException_default = ChecksumException;
 
-// node_modules/@zxing/library/esm/core/Binarizer.js
+// ../../../node_modules/@zxing/library/esm/core/Binarizer.js
 var Binarizer = (
   /** @class */
   function() {
@@ -271,7 +271,7 @@ var Binarizer = (
 );
 var Binarizer_default = Binarizer;
 
-// node_modules/@zxing/library/esm/core/util/System.js
+// ../../../node_modules/@zxing/library/esm/core/util/System.js
 var System = (
   /** @class */
   function() {
@@ -290,7 +290,7 @@ var System = (
 );
 var System_default = System;
 
-// node_modules/@zxing/library/esm/core/IndexOutOfBoundsException.js
+// ../../../node_modules/@zxing/library/esm/core/IndexOutOfBoundsException.js
 var __extends6 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -323,7 +323,7 @@ var IndexOutOfBoundsException = (
 );
 var IndexOutOfBoundsException_default = IndexOutOfBoundsException;
 
-// node_modules/@zxing/library/esm/core/ArrayIndexOutOfBoundsException.js
+// ../../../node_modules/@zxing/library/esm/core/ArrayIndexOutOfBoundsException.js
 var __extends7 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -365,7 +365,7 @@ var ArrayIndexOutOfBoundsException = (
 );
 var ArrayIndexOutOfBoundsException_default = ArrayIndexOutOfBoundsException;
 
-// node_modules/@zxing/library/esm/core/util/Arrays.js
+// ../../../node_modules/@zxing/library/esm/core/util/Arrays.js
 var __values = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -526,7 +526,7 @@ var Arrays = (
 );
 var Arrays_default = Arrays;
 
-// node_modules/@zxing/library/esm/core/util/Integer.js
+// ../../../node_modules/@zxing/library/esm/core/util/Integer.js
 var Integer = (
   /** @class */
   function() {
@@ -612,7 +612,7 @@ var Integer = (
 );
 var Integer_default = Integer;
 
-// node_modules/@zxing/library/esm/core/common/BitArray.js
+// ../../../node_modules/@zxing/library/esm/core/common/BitArray.js
 var BitArray = (
   /** @class */
   function() {
@@ -852,7 +852,7 @@ var BitArray = (
 );
 var BitArray_default = BitArray;
 
-// node_modules/@zxing/library/esm/core/DecodeHintType.js
+// ../../../node_modules/@zxing/library/esm/core/DecodeHintType.js
 var DecodeHintType;
 (function(DecodeHintType2) {
   DecodeHintType2[DecodeHintType2["OTHER"] = 0] = "OTHER";
@@ -870,7 +870,7 @@ var DecodeHintType;
 })(DecodeHintType || (DecodeHintType = {}));
 var DecodeHintType_default = DecodeHintType;
 
-// node_modules/@zxing/library/esm/core/FormatException.js
+// ../../../node_modules/@zxing/library/esm/core/FormatException.js
 var __extends8 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -906,7 +906,7 @@ var FormatException = (
 );
 var FormatException_default = FormatException;
 
-// node_modules/@zxing/library/esm/core/common/CharacterSetECI.js
+// ../../../node_modules/@zxing/library/esm/core/common/CharacterSetECI.js
 var __values2 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -1060,7 +1060,7 @@ var CharacterSetECI = (
 );
 var CharacterSetECI_default = CharacterSetECI;
 
-// node_modules/@zxing/library/esm/core/UnsupportedOperationException.js
+// ../../../node_modules/@zxing/library/esm/core/UnsupportedOperationException.js
 var __extends9 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -1093,7 +1093,7 @@ var UnsupportedOperationException = (
 );
 var UnsupportedOperationException_default = UnsupportedOperationException;
 
-// node_modules/@zxing/library/esm/core/util/StringEncoding.js
+// ../../../node_modules/@zxing/library/esm/core/util/StringEncoding.js
 var StringEncoding = (
   /** @class */
   function() {
@@ -1169,7 +1169,7 @@ var StringEncoding = (
 );
 var StringEncoding_default = StringEncoding;
 
-// node_modules/@zxing/library/esm/core/common/StringUtils.js
+// ../../../node_modules/@zxing/library/esm/core/common/StringUtils.js
 var StringUtils = (
   /** @class */
   function() {
@@ -1369,7 +1369,7 @@ var StringUtils = (
 );
 var StringUtils_default = StringUtils;
 
-// node_modules/@zxing/library/esm/core/util/StringBuilder.js
+// ../../../node_modules/@zxing/library/esm/core/util/StringBuilder.js
 var StringBuilder = (
   /** @class */
   function() {
@@ -1428,7 +1428,7 @@ var StringBuilder = (
 );
 var StringBuilder_default = StringBuilder;
 
-// node_modules/@zxing/library/esm/core/common/BitMatrix.js
+// ../../../node_modules/@zxing/library/esm/core/common/BitMatrix.js
 var BitMatrix = (
   /** @class */
   function() {
@@ -1745,7 +1745,7 @@ var BitMatrix = (
 );
 var BitMatrix_default = BitMatrix;
 
-// node_modules/@zxing/library/esm/core/NotFoundException.js
+// ../../../node_modules/@zxing/library/esm/core/NotFoundException.js
 var __extends10 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -1781,7 +1781,7 @@ var NotFoundException = (
 );
 var NotFoundException_default = NotFoundException;
 
-// node_modules/@zxing/library/esm/core/common/GlobalHistogramBinarizer.js
+// ../../../node_modules/@zxing/library/esm/core/common/GlobalHistogramBinarizer.js
 var __extends11 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -1940,7 +1940,7 @@ var GlobalHistogramBinarizer = (
 );
 var GlobalHistogramBinarizer_default = GlobalHistogramBinarizer;
 
-// node_modules/@zxing/library/esm/core/common/HybridBinarizer.js
+// ../../../node_modules/@zxing/library/esm/core/common/HybridBinarizer.js
 var __extends12 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -2097,7 +2097,7 @@ var HybridBinarizer = (
 );
 var HybridBinarizer_default = HybridBinarizer;
 
-// node_modules/@zxing/library/esm/core/LuminanceSource.js
+// ../../../node_modules/@zxing/library/esm/core/LuminanceSource.js
 var LuminanceSource = (
   /** @class */
   function() {
@@ -2154,7 +2154,7 @@ var LuminanceSource = (
 );
 var LuminanceSource_default = LuminanceSource;
 
-// node_modules/@zxing/library/esm/core/InvertedLuminanceSource.js
+// ../../../node_modules/@zxing/library/esm/core/InvertedLuminanceSource.js
 var __extends13 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -2225,7 +2225,7 @@ var InvertedLuminanceSource = (
 );
 var InvertedLuminanceSource_default = InvertedLuminanceSource;
 
-// node_modules/@zxing/library/esm/browser/HTMLCanvasElementLuminanceSource.js
+// ../../../node_modules/@zxing/library/esm/browser/HTMLCanvasElementLuminanceSource.js
 var __extends14 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -2374,7 +2374,7 @@ var HTMLCanvasElementLuminanceSource = (
   }(LuminanceSource_default)
 );
 
-// node_modules/@zxing/library/esm/browser/VideoInputDevice.js
+// ../../../node_modules/@zxing/library/esm/browser/VideoInputDevice.js
 var VideoInputDevice = (
   /** @class */
   function() {
@@ -2396,7 +2396,7 @@ var VideoInputDevice = (
   }()
 );
 
-// node_modules/@zxing/library/esm/browser/BrowserCodeReader.js
+// ../../../node_modules/@zxing/library/esm/browser/BrowserCodeReader.js
 var __awaiter = function(thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function(resolve) {
@@ -3321,7 +3321,7 @@ var BrowserCodeReader = (
   }()
 );
 
-// node_modules/@zxing/library/esm/core/Result.js
+// ../../../node_modules/@zxing/library/esm/core/Result.js
 var Result = (
   /** @class */
   function() {
@@ -3409,7 +3409,7 @@ var Result = (
 );
 var Result_default = Result;
 
-// node_modules/@zxing/library/esm/core/BarcodeFormat.js
+// ../../../node_modules/@zxing/library/esm/core/BarcodeFormat.js
 var BarcodeFormat;
 (function(BarcodeFormat2) {
   BarcodeFormat2[BarcodeFormat2["AZTEC"] = 0] = "AZTEC";
@@ -3432,7 +3432,7 @@ var BarcodeFormat;
 })(BarcodeFormat || (BarcodeFormat = {}));
 var BarcodeFormat_default = BarcodeFormat;
 
-// node_modules/@zxing/library/esm/core/ResultMetadataType.js
+// ../../../node_modules/@zxing/library/esm/core/ResultMetadataType.js
 var ResultMetadataType;
 (function(ResultMetadataType2) {
   ResultMetadataType2[ResultMetadataType2["OTHER"] = 0] = "OTHER";
@@ -3449,7 +3449,7 @@ var ResultMetadataType;
 })(ResultMetadataType || (ResultMetadataType = {}));
 var ResultMetadataType_default = ResultMetadataType;
 
-// node_modules/@zxing/library/esm/core/common/DecoderResult.js
+// ../../../node_modules/@zxing/library/esm/core/common/DecoderResult.js
 var DecoderResult = (
   /** @class */
   function() {
@@ -3518,7 +3518,7 @@ var DecoderResult = (
 );
 var DecoderResult_default = DecoderResult;
 
-// node_modules/@zxing/library/esm/core/common/reedsolomon/AbstractGenericGF.js
+// ../../../node_modules/@zxing/library/esm/core/common/reedsolomon/AbstractGenericGF.js
 var AbstractGenericGF = (
   /** @class */
   function() {
@@ -3541,7 +3541,7 @@ var AbstractGenericGF = (
 );
 var AbstractGenericGF_default = AbstractGenericGF;
 
-// node_modules/@zxing/library/esm/core/common/reedsolomon/GenericGFPoly.js
+// ../../../node_modules/@zxing/library/esm/core/common/reedsolomon/GenericGFPoly.js
 var GenericGFPoly = (
   /** @class */
   function() {
@@ -3741,7 +3741,7 @@ var GenericGFPoly = (
 );
 var GenericGFPoly_default = GenericGFPoly;
 
-// node_modules/@zxing/library/esm/core/ArithmeticException.js
+// ../../../node_modules/@zxing/library/esm/core/ArithmeticException.js
 var __extends15 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -3774,7 +3774,7 @@ var ArithmeticException = (
 );
 var ArithmeticException_default = ArithmeticException;
 
-// node_modules/@zxing/library/esm/core/common/reedsolomon/GenericGF.js
+// ../../../node_modules/@zxing/library/esm/core/common/reedsolomon/GenericGF.js
 var __extends16 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -3877,7 +3877,7 @@ var GenericGF = (
 );
 var GenericGF_default = GenericGF;
 
-// node_modules/@zxing/library/esm/core/ReedSolomonException.js
+// ../../../node_modules/@zxing/library/esm/core/ReedSolomonException.js
 var __extends17 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -3910,7 +3910,7 @@ var ReedSolomonException = (
 );
 var ReedSolomonException_default = ReedSolomonException;
 
-// node_modules/@zxing/library/esm/core/IllegalStateException.js
+// ../../../node_modules/@zxing/library/esm/core/IllegalStateException.js
 var __extends18 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -3943,7 +3943,7 @@ var IllegalStateException = (
 );
 var IllegalStateException_default = IllegalStateException;
 
-// node_modules/@zxing/library/esm/core/common/reedsolomon/ReedSolomonDecoder.js
+// ../../../node_modules/@zxing/library/esm/core/common/reedsolomon/ReedSolomonDecoder.js
 var ReedSolomonDecoder = (
   /** @class */
   function() {
@@ -4067,7 +4067,7 @@ var ReedSolomonDecoder = (
 );
 var ReedSolomonDecoder_default = ReedSolomonDecoder;
 
-// node_modules/@zxing/library/esm/core/aztec/decoder/Decoder.js
+// ../../../node_modules/@zxing/library/esm/core/aztec/decoder/Decoder.js
 var Table;
 (function(Table2) {
   Table2[Table2["UPPER"] = 0] = "UPPER";
@@ -4313,7 +4313,7 @@ var Decoder = (
 );
 var Decoder_default = Decoder;
 
-// node_modules/@zxing/library/esm/core/common/detector/MathUtils.js
+// ../../../node_modules/@zxing/library/esm/core/common/detector/MathUtils.js
 var MathUtils = (
   /** @class */
   function() {
@@ -4349,7 +4349,7 @@ var MathUtils = (
 );
 var MathUtils_default = MathUtils;
 
-// node_modules/@zxing/library/esm/core/util/Float.js
+// ../../../node_modules/@zxing/library/esm/core/util/Float.js
 var Float = (
   /** @class */
   function() {
@@ -4364,7 +4364,7 @@ var Float = (
 );
 var Float_default = Float;
 
-// node_modules/@zxing/library/esm/core/ResultPoint.js
+// ../../../node_modules/@zxing/library/esm/core/ResultPoint.js
 var ResultPoint = (
   /** @class */
   function() {
@@ -4433,7 +4433,7 @@ var ResultPoint = (
 );
 var ResultPoint_default = ResultPoint;
 
-// node_modules/@zxing/library/esm/core/common/DetectorResult.js
+// ../../../node_modules/@zxing/library/esm/core/common/DetectorResult.js
 var DetectorResult = (
   /** @class */
   function() {
@@ -4452,7 +4452,7 @@ var DetectorResult = (
 );
 var DetectorResult_default = DetectorResult;
 
-// node_modules/@zxing/library/esm/core/aztec/AztecDetectorResult.js
+// ../../../node_modules/@zxing/library/esm/core/aztec/AztecDetectorResult.js
 var __extends19 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -4497,7 +4497,7 @@ var AztecDetectorResult = (
 );
 var AztecDetectorResult_default = AztecDetectorResult;
 
-// node_modules/@zxing/library/esm/core/common/detector/WhiteRectangleDetector.js
+// ../../../node_modules/@zxing/library/esm/core/common/detector/WhiteRectangleDetector.js
 var WhiteRectangleDetector = (
   /** @class */
   function() {
@@ -4692,7 +4692,7 @@ var WhiteRectangleDetector = (
 );
 var WhiteRectangleDetector_default = WhiteRectangleDetector;
 
-// node_modules/@zxing/library/esm/core/common/GridSampler.js
+// ../../../node_modules/@zxing/library/esm/core/common/GridSampler.js
 var GridSampler = (
   /** @class */
   function() {
@@ -4753,7 +4753,7 @@ var GridSampler = (
 );
 var GridSampler_default = GridSampler;
 
-// node_modules/@zxing/library/esm/core/common/PerspectiveTransform.js
+// ../../../node_modules/@zxing/library/esm/core/common/PerspectiveTransform.js
 var PerspectiveTransform = (
   /** @class */
   function() {
@@ -4841,7 +4841,7 @@ var PerspectiveTransform = (
 );
 var PerspectiveTransform_default = PerspectiveTransform;
 
-// node_modules/@zxing/library/esm/core/common/DefaultGridSampler.js
+// ../../../node_modules/@zxing/library/esm/core/common/DefaultGridSampler.js
 var __extends20 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -4904,7 +4904,7 @@ var DefaultGridSampler = (
 );
 var DefaultGridSampler_default = DefaultGridSampler;
 
-// node_modules/@zxing/library/esm/core/common/GridSamplerInstance.js
+// ../../../node_modules/@zxing/library/esm/core/common/GridSamplerInstance.js
 var GridSamplerInstance = (
   /** @class */
   function() {
@@ -4922,7 +4922,7 @@ var GridSamplerInstance = (
 );
 var GridSamplerInstance_default = GridSamplerInstance;
 
-// node_modules/@zxing/library/esm/core/aztec/detector/Detector.js
+// ../../../node_modules/@zxing/library/esm/core/aztec/detector/Detector.js
 var Point = (
   /** @class */
   function() {
@@ -5266,7 +5266,7 @@ var Detector = (
 );
 var Detector_default = Detector;
 
-// node_modules/@zxing/library/esm/core/aztec/AztecReader.js
+// ../../../node_modules/@zxing/library/esm/core/aztec/AztecReader.js
 var AztecReader = (
   /** @class */
   function() {
@@ -5329,7 +5329,7 @@ var AztecReader = (
 );
 var AztecReader_default = AztecReader;
 
-// node_modules/@zxing/library/esm/browser/BrowserAztecCodeReader.js
+// ../../../node_modules/@zxing/library/esm/browser/BrowserAztecCodeReader.js
 var __extends21 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -5363,7 +5363,7 @@ var BrowserAztecCodeReader = (
   }(BrowserCodeReader)
 );
 
-// node_modules/@zxing/library/esm/core/oned/OneDReader.js
+// ../../../node_modules/@zxing/library/esm/core/oned/OneDReader.js
 var OneDReader = (
   /** @class */
   function() {
@@ -5530,7 +5530,7 @@ var OneDReader = (
 );
 var OneDReader_default = OneDReader;
 
-// node_modules/@zxing/library/esm/core/oned/Code128Reader.js
+// ../../../node_modules/@zxing/library/esm/core/oned/Code128Reader.js
 var __extends22 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -5871,7 +5871,7 @@ var Code128Reader = (
 );
 var Code128Reader_default = Code128Reader;
 
-// node_modules/@zxing/library/esm/core/oned/Code39Reader.js
+// ../../../node_modules/@zxing/library/esm/core/oned/Code39Reader.js
 var __extends23 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -6213,7 +6213,7 @@ var Code39Reader = (
 );
 var Code39Reader_default = Code39Reader;
 
-// node_modules/@zxing/library/esm/core/oned/Code93Reader.js
+// ../../../node_modules/@zxing/library/esm/core/oned/Code93Reader.js
 var __extends24 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -6491,7 +6491,7 @@ var Code93Reader = (
 );
 var Code93Reader_default = Code93Reader;
 
-// node_modules/@zxing/library/esm/core/oned/ITFReader.js
+// ../../../node_modules/@zxing/library/esm/core/oned/ITFReader.js
 var __extends25 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -6750,7 +6750,7 @@ var ITFReader = (
 );
 var ITFReader_default = ITFReader;
 
-// node_modules/@zxing/library/esm/core/oned/AbstractUPCEANReader.js
+// ../../../node_modules/@zxing/library/esm/core/oned/AbstractUPCEANReader.js
 var __extends26 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -6893,7 +6893,7 @@ var AbstractUPCEANReader = (
 );
 var AbstractUPCEANReader_default = AbstractUPCEANReader;
 
-// node_modules/@zxing/library/esm/core/oned/UPCEANExtension5Support.js
+// ../../../node_modules/@zxing/library/esm/core/oned/UPCEANExtension5Support.js
 var __values7 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -7040,7 +7040,7 @@ var UPCEANExtension5Support = (
 );
 var UPCEANExtension5Support_default = UPCEANExtension5Support;
 
-// node_modules/@zxing/library/esm/core/oned/UPCEANExtension2Support.js
+// ../../../node_modules/@zxing/library/esm/core/oned/UPCEANExtension2Support.js
 var __values8 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -7130,7 +7130,7 @@ var UPCEANExtension2Support = (
 );
 var UPCEANExtension2Support_default = UPCEANExtension2Support;
 
-// node_modules/@zxing/library/esm/core/oned/UPCEANExtensionSupport.js
+// ../../../node_modules/@zxing/library/esm/core/oned/UPCEANExtensionSupport.js
 var UPCEANExtensionSupport = (
   /** @class */
   function() {
@@ -7152,7 +7152,7 @@ var UPCEANExtensionSupport = (
 );
 var UPCEANExtensionSupport_default = UPCEANExtensionSupport;
 
-// node_modules/@zxing/library/esm/core/oned/UPCEANReader.js
+// ../../../node_modules/@zxing/library/esm/core/oned/UPCEANReader.js
 var __extends27 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -7291,7 +7291,7 @@ var UPCEANReader = (
 );
 var UPCEANReader_default = UPCEANReader;
 
-// node_modules/@zxing/library/esm/core/oned/EAN13Reader.js
+// ../../../node_modules/@zxing/library/esm/core/oned/EAN13Reader.js
 var __extends28 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -7413,7 +7413,7 @@ var EAN13Reader = (
 );
 var EAN13Reader_default = EAN13Reader;
 
-// node_modules/@zxing/library/esm/core/oned/EAN8Reader.js
+// ../../../node_modules/@zxing/library/esm/core/oned/EAN8Reader.js
 var __extends29 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -7520,7 +7520,7 @@ var EAN8Reader = (
 );
 var EAN8Reader_default = EAN8Reader;
 
-// node_modules/@zxing/library/esm/core/oned/UPCAReader.js
+// ../../../node_modules/@zxing/library/esm/core/oned/UPCAReader.js
 var __extends30 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -7581,7 +7581,7 @@ var UPCAReader = (
 );
 var UPCAReader_default = UPCAReader;
 
-// node_modules/@zxing/library/esm/core/oned/UPCEReader.js
+// ../../../node_modules/@zxing/library/esm/core/oned/UPCEReader.js
 var __extends31 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -7736,7 +7736,7 @@ var UPCEReader = (
 );
 var UPCEReader_default = UPCEReader;
 
-// node_modules/@zxing/library/esm/core/oned/MultiFormatUPCEANReader.js
+// ../../../node_modules/@zxing/library/esm/core/oned/MultiFormatUPCEANReader.js
 var __extends32 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -7858,7 +7858,7 @@ var MultiFormatUPCEANReader = (
 );
 var MultiFormatUPCEANReader_default = MultiFormatUPCEANReader;
 
-// node_modules/@zxing/library/esm/core/oned/CodaBarReader.js
+// ../../../node_modules/@zxing/library/esm/core/oned/CodaBarReader.js
 var __extends33 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -7968,7 +7968,7 @@ var CodaBarReader = (
 );
 var CodaBarReader_default = CodaBarReader;
 
-// node_modules/@zxing/library/esm/core/oned/rss/AbstractRSSReader.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/AbstractRSSReader.js
 var __extends34 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -8109,7 +8109,7 @@ var AbstractRSSReader = (
 );
 var AbstractRSSReader_default = AbstractRSSReader;
 
-// node_modules/@zxing/library/esm/core/oned/rss/DataCharacter.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/DataCharacter.js
 var DataCharacter = (
   /** @class */
   function() {
@@ -8141,7 +8141,7 @@ var DataCharacter = (
 );
 var DataCharacter_default = DataCharacter;
 
-// node_modules/@zxing/library/esm/core/oned/rss/FinderPattern.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/FinderPattern.js
 var FinderPattern = (
   /** @class */
   function() {
@@ -8178,7 +8178,7 @@ var FinderPattern = (
 );
 var FinderPattern_default = FinderPattern;
 
-// node_modules/@zxing/library/esm/core/oned/rss/RSSUtils.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/RSSUtils.js
 var __values14 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -8272,7 +8272,7 @@ var RSSUtils = (
 );
 var RSSUtils_default = RSSUtils;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/BitArrayBuilder.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/BitArrayBuilder.js
 var BitArrayBuilder = (
   /** @class */
   function() {
@@ -8320,7 +8320,7 @@ var BitArrayBuilder = (
 );
 var BitArrayBuilder_default = BitArrayBuilder;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/BlockParsedResult.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/BlockParsedResult.js
 var BlockParsedResult = (
   /** @class */
   function() {
@@ -8343,7 +8343,7 @@ var BlockParsedResult = (
 );
 var BlockParsedResult_default = BlockParsedResult;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/DecodedObject.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/DecodedObject.js
 var DecodedObject = (
   /** @class */
   function() {
@@ -8358,7 +8358,7 @@ var DecodedObject = (
 );
 var DecodedObject_default = DecodedObject;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/DecodedChar.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/DecodedChar.js
 var __extends35 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -8399,7 +8399,7 @@ var DecodedChar = (
 );
 var DecodedChar_default = DecodedChar;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/DecodedInformation.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/DecodedInformation.js
 var __extends36 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -8449,7 +8449,7 @@ var DecodedInformation = (
 );
 var DecodedInformation_default = DecodedInformation;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/DecodedNumeric.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/DecodedNumeric.js
 var __extends37 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -8506,7 +8506,7 @@ var DecodedNumeric = (
 );
 var DecodedNumeric_default = DecodedNumeric;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/FieldParser.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/FieldParser.js
 var __values15 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -8797,7 +8797,7 @@ var FieldParser = (
 );
 var FieldParser_default = FieldParser;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/GeneralAppIdDecoder.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/GeneralAppIdDecoder.js
 var GeneralAppIdDecoder = (
   /** @class */
   function() {
@@ -9165,7 +9165,7 @@ var GeneralAppIdDecoder = (
 );
 var GeneralAppIdDecoder_default = GeneralAppIdDecoder;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AbstractExpandedDecoder.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AbstractExpandedDecoder.js
 var AbstractExpandedDecoder = (
   /** @class */
   function() {
@@ -9184,7 +9184,7 @@ var AbstractExpandedDecoder = (
 );
 var AbstractExpandedDecoder_default = AbstractExpandedDecoder;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AI01decoder.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AI01decoder.js
 var __extends38 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -9248,7 +9248,7 @@ var AI01decoder = (
 );
 var AI01decoder_default = AI01decoder;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AI01AndOtherAIs.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AI01AndOtherAIs.js
 var __extends39 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -9290,7 +9290,7 @@ var AI01AndOtherAIs = (
 );
 var AI01AndOtherAIs_default = AI01AndOtherAIs;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AnyAIDecoder.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AnyAIDecoder.js
 var __extends40 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -9327,7 +9327,7 @@ var AnyAIDecoder = (
 );
 var AnyAIDecoder_default = AnyAIDecoder;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AI01weightDecoder.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AI01weightDecoder.js
 var __extends41 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -9372,7 +9372,7 @@ var AI01weightDecoder = (
 );
 var AI01weightDecoder_default = AI01weightDecoder;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AI013x0xDecoder.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AI013x0xDecoder.js
 var __extends42 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -9415,7 +9415,7 @@ var AI013x0xDecoder = (
 );
 var AI013x0xDecoder_default = AI013x0xDecoder;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AI013103decoder.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AI013103decoder.js
 var __extends43 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -9453,7 +9453,7 @@ var AI013103decoder = (
 );
 var AI013103decoder_default = AI013103decoder;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AI01320xDecoder.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AI01320xDecoder.js
 var __extends44 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -9498,7 +9498,7 @@ var AI01320xDecoder = (
 );
 var AI01320xDecoder_default = AI01320xDecoder;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AI01392xDecoder.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AI01392xDecoder.js
 var __extends45 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -9546,7 +9546,7 @@ var AI01392xDecoder = (
 );
 var AI01392xDecoder_default = AI01392xDecoder;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AI01393xDecoder.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AI01393xDecoder.js
 var __extends46 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -9603,7 +9603,7 @@ var AI01393xDecoder = (
 );
 var AI01393xDecoder_default = AI01393xDecoder;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AI013x0x1xDecoder.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AI013x0x1xDecoder.js
 var __extends47 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -9686,7 +9686,7 @@ var AI013x0x1xDecoder = (
 );
 var AI013x0x1xDecoder_default = AI013x0x1xDecoder;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AbstractExpandedDecoderComplement.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/decoders/AbstractExpandedDecoderComplement.js
 function createDecoder(information) {
   try {
     if (information.get(1)) {
@@ -9734,7 +9734,7 @@ function createDecoder(information) {
   }
 }
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/ExpandedPair.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/ExpandedPair.js
 var ExpandedPair = (
   /** @class */
   function() {
@@ -9780,7 +9780,7 @@ var ExpandedPair = (
 );
 var ExpandedPair_default = ExpandedPair;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/ExpandedRow.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/ExpandedRow.js
 var ExpandedRow = (
   /** @class */
   function() {
@@ -9827,7 +9827,7 @@ var ExpandedRow = (
 );
 var ExpandedRow_default = ExpandedRow;
 
-// node_modules/@zxing/library/esm/core/oned/rss/expanded/RSSExpandedReader.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/expanded/RSSExpandedReader.js
 var __extends48 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -10521,7 +10521,7 @@ var RSSExpandedReader = (
 );
 var RSSExpandedReader_default = RSSExpandedReader;
 
-// node_modules/@zxing/library/esm/core/oned/rss/Pair.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/Pair.js
 var __extends49 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -10565,7 +10565,7 @@ var Pair = (
 );
 var Pair_default = Pair;
 
-// node_modules/@zxing/library/esm/core/oned/rss/RSS14Reader.js
+// ../../../node_modules/@zxing/library/esm/core/oned/rss/RSS14Reader.js
 var __extends50 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -10990,7 +10990,7 @@ var RSS14Reader = (
 );
 var RSS14Reader_default = RSS14Reader;
 
-// node_modules/@zxing/library/esm/core/oned/MultiFormatOneDReader.js
+// ../../../node_modules/@zxing/library/esm/core/oned/MultiFormatOneDReader.js
 var __extends51 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -11077,7 +11077,7 @@ var MultiFormatOneDReader = (
 );
 var MultiFormatOneDReader_default = MultiFormatOneDReader;
 
-// node_modules/@zxing/library/esm/browser/BrowserBarcodeReader.js
+// ../../../node_modules/@zxing/library/esm/browser/BrowserBarcodeReader.js
 var __extends52 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -11111,7 +11111,7 @@ var BrowserBarcodeReader = (
   }(BrowserCodeReader)
 );
 
-// node_modules/@zxing/library/esm/core/datamatrix/decoder/Version.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/decoder/Version.js
 var __values18 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -11249,7 +11249,7 @@ var Version = (
 );
 var Version_default = Version;
 
-// node_modules/@zxing/library/esm/core/datamatrix/decoder/BitMatrixParser.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/decoder/BitMatrixParser.js
 var BitMatrixParser = (
   /** @class */
   function() {
@@ -11552,7 +11552,7 @@ var BitMatrixParser = (
 );
 var BitMatrixParser_default = BitMatrixParser;
 
-// node_modules/@zxing/library/esm/core/datamatrix/decoder/DataBlock.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/decoder/DataBlock.js
 var __values19 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -11655,7 +11655,7 @@ var DataBlock = (
 );
 var DataBlock_default = DataBlock;
 
-// node_modules/@zxing/library/esm/core/common/BitSource.js
+// ../../../node_modules/@zxing/library/esm/core/common/BitSource.js
 var BitSource = (
   /** @class */
   function() {
@@ -11716,7 +11716,7 @@ var BitSource = (
 );
 var BitSource_default = BitSource;
 
-// node_modules/@zxing/library/esm/core/datamatrix/decoder/DecodedBitStreamParser.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/decoder/DecodedBitStreamParser.js
 var Mode;
 (function(Mode5) {
   Mode5[Mode5["PAD_ENCODE"] = 0] = "PAD_ENCODE";
@@ -12103,7 +12103,7 @@ var DecodedBitStreamParser = (
 );
 var DecodedBitStreamParser_default = DecodedBitStreamParser;
 
-// node_modules/@zxing/library/esm/core/datamatrix/decoder/Decoder.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/decoder/Decoder.js
 var __values20 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -12176,7 +12176,7 @@ var Decoder2 = (
 );
 var Decoder_default2 = Decoder2;
 
-// node_modules/@zxing/library/esm/core/datamatrix/detector/Detector.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/detector/Detector.js
 var Detector2 = (
   /** @class */
   function() {
@@ -12402,7 +12402,7 @@ var Detector2 = (
 );
 var Detector_default2 = Detector2;
 
-// node_modules/@zxing/library/esm/core/datamatrix/DataMatrixReader.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/DataMatrixReader.js
 var DataMatrixReader = (
   /** @class */
   function() {
@@ -12490,7 +12490,7 @@ var DataMatrixReader = (
 );
 var DataMatrixReader_default = DataMatrixReader;
 
-// node_modules/@zxing/library/esm/browser/BrowserDatamatrixCodeReader.js
+// ../../../node_modules/@zxing/library/esm/browser/BrowserDatamatrixCodeReader.js
 var __extends53 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -12524,7 +12524,7 @@ var BrowserDatamatrixCodeReader = (
   }(BrowserCodeReader)
 );
 
-// node_modules/@zxing/library/esm/core/qrcode/decoder/ErrorCorrectionLevel.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/decoder/ErrorCorrectionLevel.js
 var ErrorCorrectionLevelValues;
 (function(ErrorCorrectionLevelValues2) {
   ErrorCorrectionLevelValues2[ErrorCorrectionLevelValues2["L"] = 0] = "L";
@@ -12589,7 +12589,7 @@ var ErrorCorrectionLevel = (
 );
 var ErrorCorrectionLevel_default = ErrorCorrectionLevel;
 
-// node_modules/@zxing/library/esm/core/qrcode/decoder/FormatInformation.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/decoder/FormatInformation.js
 var __values21 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -12685,7 +12685,7 @@ var FormatInformation = (
 );
 var FormatInformation_default = FormatInformation;
 
-// node_modules/@zxing/library/esm/core/qrcode/decoder/ECBlocks.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/decoder/ECBlocks.js
 var __values22 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -12747,7 +12747,7 @@ var ECBlocks2 = (
 );
 var ECBlocks_default = ECBlocks2;
 
-// node_modules/@zxing/library/esm/core/qrcode/decoder/ECB.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/decoder/ECB.js
 var ECB2 = (
   /** @class */
   function() {
@@ -12766,7 +12766,7 @@ var ECB2 = (
 );
 var ECB_default = ECB2;
 
-// node_modules/@zxing/library/esm/core/qrcode/decoder/Version.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/decoder/Version.js
 var __values23 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -12898,7 +12898,7 @@ var Version2 = (
 );
 var Version_default2 = Version2;
 
-// node_modules/@zxing/library/esm/core/qrcode/decoder/DataMask.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/decoder/DataMask.js
 var DataMaskValues;
 (function(DataMaskValues2) {
   DataMaskValues2[DataMaskValues2["DATA_MASK_000"] = 0] = "DATA_MASK_000";
@@ -12984,7 +12984,7 @@ var DataMask = (
 );
 var DataMask_default = DataMask;
 
-// node_modules/@zxing/library/esm/core/qrcode/decoder/BitMatrixParser.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/decoder/BitMatrixParser.js
 var BitMatrixParser2 = (
   /** @class */
   function() {
@@ -13132,7 +13132,7 @@ var BitMatrixParser2 = (
 );
 var BitMatrixParser_default2 = BitMatrixParser2;
 
-// node_modules/@zxing/library/esm/core/qrcode/decoder/DataBlock.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/decoder/DataBlock.js
 var __values24 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -13240,7 +13240,7 @@ var DataBlock2 = (
 );
 var DataBlock_default2 = DataBlock2;
 
-// node_modules/@zxing/library/esm/core/qrcode/decoder/Mode.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/decoder/Mode.js
 var ModeValues;
 (function(ModeValues2) {
   ModeValues2[ModeValues2["TERMINATOR"] = 0] = "TERMINATOR";
@@ -13317,7 +13317,7 @@ var Mode2 = (
 );
 var Mode_default = Mode2;
 
-// node_modules/@zxing/library/esm/core/qrcode/decoder/DecodedBitStreamParser.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/decoder/DecodedBitStreamParser.js
 var DecodedBitStreamParser2 = (
   /** @class */
   function() {
@@ -13562,7 +13562,7 @@ var DecodedBitStreamParser2 = (
 );
 var DecodedBitStreamParser_default2 = DecodedBitStreamParser2;
 
-// node_modules/@zxing/library/esm/core/qrcode/decoder/QRCodeDecoderMetaData.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/decoder/QRCodeDecoderMetaData.js
 var QRCodeDecoderMetaData = (
   /** @class */
   function() {
@@ -13585,7 +13585,7 @@ var QRCodeDecoderMetaData = (
 );
 var QRCodeDecoderMetaData_default = QRCodeDecoderMetaData;
 
-// node_modules/@zxing/library/esm/core/qrcode/decoder/Decoder.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/decoder/Decoder.js
 var __values25 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -13698,7 +13698,7 @@ var Decoder3 = (
 );
 var Decoder_default3 = Decoder3;
 
-// node_modules/@zxing/library/esm/core/qrcode/detector/AlignmentPattern.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/detector/AlignmentPattern.js
 var __extends54 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -13745,7 +13745,7 @@ var AlignmentPattern = (
 );
 var AlignmentPattern_default = AlignmentPattern;
 
-// node_modules/@zxing/library/esm/core/qrcode/detector/AlignmentPatternFinder.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/detector/AlignmentPatternFinder.js
 var __values26 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -13932,7 +13932,7 @@ var AlignmentPatternFinder = (
 );
 var AlignmentPatternFinder_default = AlignmentPatternFinder;
 
-// node_modules/@zxing/library/esm/core/qrcode/detector/FinderPattern.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/detector/FinderPattern.js
 var __extends55 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -13990,7 +13990,7 @@ var FinderPattern2 = (
 );
 var FinderPattern_default2 = FinderPattern2;
 
-// node_modules/@zxing/library/esm/core/qrcode/detector/FinderPatternInfo.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/detector/FinderPatternInfo.js
 var FinderPatternInfo = (
   /** @class */
   function() {
@@ -14013,7 +14013,7 @@ var FinderPatternInfo = (
 );
 var FinderPatternInfo_default = FinderPatternInfo;
 
-// node_modules/@zxing/library/esm/core/qrcode/detector/FinderPatternFinder.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/detector/FinderPatternFinder.js
 var __values27 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -14547,7 +14547,7 @@ var FinderPatternFinder = (
 );
 var FinderPatternFinder_default = FinderPatternFinder;
 
-// node_modules/@zxing/library/esm/core/qrcode/detector/Detector.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/detector/Detector.js
 var Detector3 = (
   /** @class */
   function() {
@@ -14780,7 +14780,7 @@ var Detector3 = (
 );
 var Detector_default3 = Detector3;
 
-// node_modules/@zxing/library/esm/core/qrcode/QRCodeReader.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/QRCodeReader.js
 var QRCodeReader = (
   /** @class */
   function() {
@@ -14913,7 +14913,7 @@ var QRCodeReader = (
 );
 var QRCodeReader_default = QRCodeReader;
 
-// node_modules/@zxing/library/esm/core/pdf417/PDF417Common.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/PDF417Common.js
 var __values28 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -14985,7 +14985,7 @@ var PDF417Common = (
 );
 var PDF417Common_default = PDF417Common;
 
-// node_modules/@zxing/library/esm/core/pdf417/detector/PDF417DetectorResult.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/detector/PDF417DetectorResult.js
 var PDF417DetectorResult = (
   /** @class */
   function() {
@@ -15004,7 +15004,7 @@ var PDF417DetectorResult = (
 );
 var PDF417DetectorResult_default = PDF417DetectorResult;
 
-// node_modules/@zxing/library/esm/core/pdf417/detector/Detector.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/detector/Detector.js
 var __values29 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -15235,7 +15235,7 @@ var Detector4 = (
 );
 var Detector_default4 = Detector4;
 
-// node_modules/@zxing/library/esm/core/pdf417/decoder/ec/ModulusPoly.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/decoder/ec/ModulusPoly.js
 var __values30 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -15488,7 +15488,7 @@ var ModulusPoly = (
 );
 var ModulusPoly_default = ModulusPoly;
 
-// node_modules/@zxing/library/esm/core/pdf417/decoder/ec/ModulusBase.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/decoder/ec/ModulusBase.js
 var ModulusBase = (
   /** @class */
   function() {
@@ -15532,7 +15532,7 @@ var ModulusBase = (
 );
 var ModulusBase_default = ModulusBase;
 
-// node_modules/@zxing/library/esm/core/pdf417/decoder/ec/ModulusGF.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/decoder/ec/ModulusGF.js
 var __extends56 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -15599,7 +15599,7 @@ var ModulusGF = (
 );
 var ModulusGF_default = ModulusGF;
 
-// node_modules/@zxing/library/esm/core/pdf417/decoder/ec/ErrorCorrection.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/decoder/ec/ErrorCorrection.js
 var __values31 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -15747,7 +15747,7 @@ var ErrorCorrection = (
 );
 var ErrorCorrection_default = ErrorCorrection;
 
-// node_modules/@zxing/library/esm/core/pdf417/decoder/BoundingBox.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/decoder/BoundingBox.js
 var BoundingBox = (
   /** @class */
   function() {
@@ -15863,7 +15863,7 @@ var BoundingBox = (
 );
 var BoundingBox_default = BoundingBox;
 
-// node_modules/@zxing/library/esm/core/pdf417/decoder/BarcodeMetadata.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/decoder/BarcodeMetadata.js
 var BarcodeMetadata = (
   /** @class */
   function() {
@@ -15894,7 +15894,7 @@ var BarcodeMetadata = (
 );
 var BarcodeMetadata_default = BarcodeMetadata;
 
-// node_modules/@zxing/library/esm/core/util/Formatter.js
+// ../../../node_modules/@zxing/library/esm/core/util/Formatter.js
 var Formatter = (
   /** @class */
   function() {
@@ -15956,7 +15956,7 @@ var Formatter = (
 );
 var Formatter_default = Formatter;
 
-// node_modules/@zxing/library/esm/core/pdf417/decoder/DetectionResultColumn.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/decoder/DetectionResultColumn.js
 var __values32 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -16048,7 +16048,7 @@ var DetectionResultColumn = (
 );
 var DetectionResultColumn_default = DetectionResultColumn;
 
-// node_modules/@zxing/library/esm/core/pdf417/decoder/BarcodeValue.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/decoder/BarcodeValue.js
 var __values33 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -16144,7 +16144,7 @@ var BarcodeValue = (
 );
 var BarcodeValue_default = BarcodeValue;
 
-// node_modules/@zxing/library/esm/core/pdf417/decoder/DetectionResultRowIndicatorColumn.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/decoder/DetectionResultRowIndicatorColumn.js
 var __extends57 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -16412,7 +16412,7 @@ var DetectionResultRowIndicatorColumn = (
 );
 var DetectionResultRowIndicatorColumn_default = DetectionResultRowIndicatorColumn;
 
-// node_modules/@zxing/library/esm/core/pdf417/decoder/DetectionResult.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/decoder/DetectionResult.js
 var __values35 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -16672,7 +16672,7 @@ var DetectionResult = (
 );
 var DetectionResult_default = DetectionResult;
 
-// node_modules/@zxing/library/esm/core/pdf417/decoder/Codeword.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/decoder/Codeword.js
 var Codeword = (
   /** @class */
   function() {
@@ -16722,7 +16722,7 @@ var Codeword = (
 );
 var Codeword_default = Codeword;
 
-// node_modules/@zxing/library/esm/core/pdf417/decoder/PDF417CodewordDecoder.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/decoder/PDF417CodewordDecoder.js
 var PDF417CodewordDecoder = (
   /** @class */
   function() {
@@ -16824,7 +16824,7 @@ var PDF417CodewordDecoder = (
 );
 var PDF417CodewordDecoder_default = PDF417CodewordDecoder;
 
-// node_modules/@zxing/library/esm/core/pdf417/PDF417ResultMetadata.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/PDF417ResultMetadata.js
 var PDF417ResultMetadata = (
   /** @class */
   function() {
@@ -16905,7 +16905,7 @@ var PDF417ResultMetadata = (
 );
 var PDF417ResultMetadata_default = PDF417ResultMetadata;
 
-// node_modules/@zxing/library/esm/core/util/Long.js
+// ../../../node_modules/@zxing/library/esm/core/util/Long.js
 var Long = (
   /** @class */
   function() {
@@ -16922,7 +16922,7 @@ var Long = (
 );
 var Long_default = Long;
 
-// node_modules/@zxing/library/esm/core/NullPointerException.js
+// ../../../node_modules/@zxing/library/esm/core/NullPointerException.js
 var __extends58 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -16955,7 +16955,7 @@ var NullPointerException = (
 );
 var NullPointerException_default = NullPointerException;
 
-// node_modules/@zxing/library/esm/core/util/OutputStream.js
+// ../../../node_modules/@zxing/library/esm/core/util/OutputStream.js
 var OutputStream = (
   /** @class */
   function() {
@@ -16985,7 +16985,7 @@ var OutputStream = (
 );
 var OutputStream_default = OutputStream;
 
-// node_modules/@zxing/library/esm/core/OutOfMemoryError.js
+// ../../../node_modules/@zxing/library/esm/core/OutOfMemoryError.js
 var __extends59 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -17017,7 +17017,7 @@ var OutOfMemoryError = (
 );
 var OutOfMemoryError_default = OutOfMemoryError;
 
-// node_modules/@zxing/library/esm/core/util/ByteArrayOutputStream.js
+// ../../../node_modules/@zxing/library/esm/core/util/ByteArrayOutputStream.js
 var __extends60 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -17127,7 +17127,7 @@ var ByteArrayOutputStream = (
 );
 var ByteArrayOutputStream_default = ByteArrayOutputStream;
 
-// node_modules/@zxing/library/esm/core/pdf417/decoder/DecodedBitStreamParser.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/decoder/DecodedBitStreamParser.js
 var Mode3;
 (function(Mode5) {
   Mode5[Mode5["ALPHA"] = 0] = "ALPHA";
@@ -17682,7 +17682,7 @@ var DecodedBitStreamParser3 = (
 );
 var DecodedBitStreamParser_default3 = DecodedBitStreamParser3;
 
-// node_modules/@zxing/library/esm/core/pdf417/decoder/PDF417ScanningDecoder.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/decoder/PDF417ScanningDecoder.js
 var __values36 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -18216,7 +18216,7 @@ var PDF417ScanningDecoder = (
 );
 var PDF417ScanningDecoder_default = PDF417ScanningDecoder;
 
-// node_modules/@zxing/library/esm/core/pdf417/PDF417Reader.js
+// ../../../node_modules/@zxing/library/esm/core/pdf417/PDF417Reader.js
 var __values37 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -18315,7 +18315,7 @@ var PDF417Reader = (
 );
 var PDF417Reader_default = PDF417Reader;
 
-// node_modules/@zxing/library/esm/core/ReaderException.js
+// ../../../node_modules/@zxing/library/esm/core/ReaderException.js
 var __extends61 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -18348,7 +18348,7 @@ var ReaderException = (
 );
 var ReaderException_default = ReaderException;
 
-// node_modules/@zxing/library/esm/core/MultiFormatReader.js
+// ../../../node_modules/@zxing/library/esm/core/MultiFormatReader.js
 var __values38 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -18475,7 +18475,7 @@ var MultiFormatReader = (
 );
 var MultiFormatReader_default = MultiFormatReader;
 
-// node_modules/@zxing/library/esm/browser/BrowserMultiFormatReader.js
+// ../../../node_modules/@zxing/library/esm/browser/BrowserMultiFormatReader.js
 var __extends62 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -18519,7 +18519,7 @@ var BrowserMultiFormatReader = (
   }(BrowserCodeReader)
 );
 
-// node_modules/@zxing/library/esm/browser/BrowserPDF417Reader.js
+// ../../../node_modules/@zxing/library/esm/browser/BrowserPDF417Reader.js
 var __extends63 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -18553,7 +18553,7 @@ var BrowserPDF417Reader = (
   }(BrowserCodeReader)
 );
 
-// node_modules/@zxing/library/esm/browser/BrowserQRCodeReader.js
+// ../../../node_modules/@zxing/library/esm/browser/BrowserQRCodeReader.js
 var __extends64 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -18587,7 +18587,7 @@ var BrowserQRCodeReader = (
   }(BrowserCodeReader)
 );
 
-// node_modules/@zxing/library/esm/core/EncodeHintType.js
+// ../../../node_modules/@zxing/library/esm/core/EncodeHintType.js
 var EncodeHintType;
 (function(EncodeHintType2) {
   EncodeHintType2[EncodeHintType2["ERROR_CORRECTION"] = 0] = "ERROR_CORRECTION";
@@ -18607,7 +18607,7 @@ var EncodeHintType;
 })(EncodeHintType || (EncodeHintType = {}));
 var EncodeHintType_default = EncodeHintType;
 
-// node_modules/@zxing/library/esm/core/common/reedsolomon/ReedSolomonEncoder.js
+// ../../../node_modules/@zxing/library/esm/core/common/reedsolomon/ReedSolomonEncoder.js
 var ReedSolomonEncoder = (
   /** @class */
   function() {
@@ -18655,7 +18655,7 @@ var ReedSolomonEncoder = (
 );
 var ReedSolomonEncoder_default = ReedSolomonEncoder;
 
-// node_modules/@zxing/library/esm/core/qrcode/encoder/MaskUtil.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/encoder/MaskUtil.js
 var MaskUtil = (
   /** @class */
   function() {
@@ -18806,7 +18806,7 @@ var MaskUtil = (
 );
 var MaskUtil_default = MaskUtil;
 
-// node_modules/@zxing/library/esm/core/qrcode/encoder/ByteMatrix.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/encoder/ByteMatrix.js
 var __values39 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -18919,7 +18919,7 @@ var ByteMatrix = (
 );
 var ByteMatrix_default = ByteMatrix;
 
-// node_modules/@zxing/library/esm/core/qrcode/encoder/QRCode.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/encoder/QRCode.js
 var QRCode = (
   /** @class */
   function() {
@@ -18985,7 +18985,7 @@ var QRCode = (
 );
 var QRCode_default = QRCode;
 
-// node_modules/@zxing/library/esm/core/WriterException.js
+// ../../../node_modules/@zxing/library/esm/core/WriterException.js
 var __extends65 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -19018,7 +19018,7 @@ var WriterException = (
 );
 var WriterException_default = WriterException;
 
-// node_modules/@zxing/library/esm/core/qrcode/encoder/MatrixUtil.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/encoder/MatrixUtil.js
 var MatrixUtil = (
   /** @class */
   function() {
@@ -19250,7 +19250,7 @@ var MatrixUtil = (
 );
 var MatrixUtil_default = MatrixUtil;
 
-// node_modules/@zxing/library/esm/core/qrcode/encoder/BlockPair.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/encoder/BlockPair.js
 var BlockPair = (
   /** @class */
   function() {
@@ -19269,7 +19269,7 @@ var BlockPair = (
 );
 var BlockPair_default = BlockPair;
 
-// node_modules/@zxing/library/esm/core/qrcode/encoder/Encoder.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/encoder/Encoder.js
 var __values40 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -19697,7 +19697,7 @@ var Encoder = (
 );
 var Encoder_default = Encoder;
 
-// node_modules/@zxing/library/esm/browser/BrowserQRCodeSvgWriter.js
+// ../../../node_modules/@zxing/library/esm/browser/BrowserQRCodeSvgWriter.js
 var BrowserQRCodeSvgWriter = (
   /** @class */
   function() {
@@ -19782,7 +19782,7 @@ var BrowserQRCodeSvgWriter = (
   }()
 );
 
-// node_modules/@zxing/library/esm/core/qrcode/QRCodeWriter.js
+// ../../../node_modules/@zxing/library/esm/core/qrcode/QRCodeWriter.js
 var QRCodeWriter = (
   /** @class */
   function() {
@@ -19841,7 +19841,7 @@ var QRCodeWriter = (
 );
 var QRCodeWriter_default = QRCodeWriter;
 
-// node_modules/@zxing/library/esm/core/MultiFormatWriter.js
+// ../../../node_modules/@zxing/library/esm/core/MultiFormatWriter.js
 var MultiFormatWriter = (
   /** @class */
   function() {
@@ -19862,7 +19862,7 @@ var MultiFormatWriter = (
   }()
 );
 
-// node_modules/@zxing/library/esm/core/PlanarYUVLuminanceSource.js
+// ../../../node_modules/@zxing/library/esm/core/PlanarYUVLuminanceSource.js
 var __extends66 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -19980,7 +19980,7 @@ var PlanarYUVLuminanceSource = (
   }(LuminanceSource_default)
 );
 
-// node_modules/@zxing/library/esm/core/RGBLuminanceSource.js
+// ../../../node_modules/@zxing/library/esm/core/RGBLuminanceSource.js
 var __extends67 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -20087,7 +20087,7 @@ var RGBLuminanceSource = (
   }(LuminanceSource_default)
 );
 
-// node_modules/@zxing/library/esm/core/util/Charset.js
+// ../../../node_modules/@zxing/library/esm/core/util/Charset.js
 var __extends68 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -20122,7 +20122,7 @@ var Charset = (
 );
 var Charset_default = Charset;
 
-// node_modules/@zxing/library/esm/core/util/StandardCharsets.js
+// ../../../node_modules/@zxing/library/esm/core/util/StandardCharsets.js
 var StandardCharsets = (
   /** @class */
   function() {
@@ -20134,7 +20134,7 @@ var StandardCharsets = (
 );
 var StandardCharsets_default = StandardCharsets;
 
-// node_modules/@zxing/library/esm/core/datamatrix/encoder/DefaultPlacement.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/encoder/DefaultPlacement.js
 var DefaultPlacement = (
   /** @class */
   function() {
@@ -20272,7 +20272,7 @@ var DefaultPlacement = (
 );
 var DefaultPlacement_default = DefaultPlacement;
 
-// node_modules/@zxing/library/esm/core/datamatrix/encoder/constants.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/encoder/constants.js
 var _a;
 var FACTOR_SETS = [5, 7, 10, 11, 12, 14, 18, 20, 24, 28, 36, 42, 48, 56, 62, 68];
 var FACTORS = [[228, 48, 15, 111, 62], [23, 68, 144, 134, 240, 92, 254], [28, 24, 185, 166, 223, 248, 116, 255, 110, 61], [175, 138, 205, 12, 194, 168, 39, 245, 60, 97, 120], [41, 153, 158, 91, 61, 42, 142, 213, 97, 178, 100, 242], [156, 97, 192, 252, 95, 9, 157, 119, 138, 45, 18, 186, 83, 185], [83, 195, 100, 39, 188, 75, 66, 61, 241, 213, 109, 129, 94, 254, 225, 48, 90, 188], [15, 195, 244, 9, 233, 71, 168, 2, 188, 160, 153, 145, 253, 79, 108, 82, 27, 174, 186, 172], [52, 190, 88, 205, 109, 39, 176, 21, 155, 197, 251, 223, 155, 21, 5, 172, 254, 124, 12, 181, 184, 96, 50, 193], [211, 231, 43, 97, 71, 96, 103, 174, 37, 151, 170, 53, 75, 34, 249, 121, 17, 138, 110, 213, 141, 136, 120, 151, 233, 168, 93, 255], [245, 127, 242, 218, 130, 250, 162, 181, 102, 120, 84, 179, 220, 251, 80, 182, 229, 18, 2, 4, 68, 33, 101, 137, 95, 119, 115, 44, 175, 184, 59, 25, 225, 98, 81, 112], [77, 193, 137, 31, 19, 38, 22, 153, 247, 105, 122, 2, 245, 133, 242, 8, 175, 95, 100, 9, 167, 105, 214, 111, 57, 121, 21, 1, 253, 57, 54, 101, 248, 202, 69, 50, 150, 177, 226, 5, 9, 5], [245, 132, 172, 223, 96, 32, 117, 22, 238, 133, 238, 231, 205, 188, 237, 87, 191, 106, 16, 147, 118, 23, 37, 90, 170, 205, 131, 88, 120, 100, 66, 138, 186, 240, 82, 44, 176, 87, 187, 147, 160, 175, 69, 213, 92, 253, 225, 19], [175, 9, 223, 238, 12, 17, 220, 208, 100, 29, 175, 170, 230, 192, 215, 235, 150, 159, 36, 223, 38, 200, 132, 54, 228, 146, 218, 234, 117, 203, 29, 232, 144, 238, 22, 150, 201, 117, 62, 207, 164, 13, 137, 245, 127, 67, 247, 28, 155, 43, 203, 107, 233, 53, 143, 46], [242, 93, 169, 50, 144, 210, 39, 118, 202, 188, 201, 189, 143, 108, 196, 37, 185, 112, 134, 230, 245, 63, 197, 190, 250, 106, 185, 221, 175, 64, 114, 71, 161, 44, 147, 6, 27, 218, 51, 63, 87, 10, 40, 130, 188, 17, 163, 31, 176, 170, 4, 107, 232, 7, 94, 166, 224, 124, 86, 47, 11, 204], [220, 228, 173, 89, 251, 149, 159, 56, 89, 33, 147, 244, 154, 36, 73, 127, 213, 136, 248, 180, 234, 197, 158, 177, 68, 122, 93, 213, 15, 160, 227, 236, 66, 139, 153, 185, 202, 167, 179, 25, 220, 232, 96, 210, 231, 136, 223, 239, 181, 241, 59, 52, 172, 25, 49, 232, 211, 189, 64, 54, 108, 153, 132, 63, 96, 103, 82, 186]];
@@ -20321,7 +20321,7 @@ var X12_ENCODATION = 3;
 var EDIFACT_ENCODATION = 4;
 var BASE256_ENCODATION = 5;
 
-// node_modules/@zxing/library/esm/core/datamatrix/encoder/ErrorCorrection.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/encoder/ErrorCorrection.js
 var ErrorCorrection2 = (
   /** @class */
   function() {
@@ -20402,7 +20402,7 @@ var ErrorCorrection2 = (
 );
 var ErrorCorrection_default2 = ErrorCorrection2;
 
-// node_modules/@zxing/library/esm/core/datamatrix/encoder/ASCIIEncoder.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/encoder/ASCIIEncoder.js
 var ASCIIEncoder = (
   /** @class */
   function() {
@@ -20465,7 +20465,7 @@ var ASCIIEncoder = (
   }()
 );
 
-// node_modules/@zxing/library/esm/core/datamatrix/encoder/Base256Encoder.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/encoder/Base256Encoder.js
 var Base256Encoder = (
   /** @class */
   function() {
@@ -20519,7 +20519,7 @@ var Base256Encoder = (
   }()
 );
 
-// node_modules/@zxing/library/esm/core/datamatrix/encoder/C40Encoder.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/encoder/C40Encoder.js
 var C40Encoder = (
   /** @class */
   function() {
@@ -20695,7 +20695,7 @@ var C40Encoder = (
   }()
 );
 
-// node_modules/@zxing/library/esm/core/datamatrix/encoder/EdifactEncoder.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/encoder/EdifactEncoder.js
 var EdifactEncoder = (
   /** @class */
   function() {
@@ -20805,7 +20805,7 @@ var EdifactEncoder = (
   }()
 );
 
-// node_modules/@zxing/library/esm/core/datamatrix/encoder/SymbolInfo.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/encoder/SymbolInfo.js
 var __extends69 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -21027,7 +21027,7 @@ var PROD_SYMBOLS = [
   new DataMatrixSymbolInfo144()
 ];
 
-// node_modules/@zxing/library/esm/core/datamatrix/encoder/EncoderContext.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/encoder/EncoderContext.js
 var EncoderContext = (
   /** @class */
   function() {
@@ -21118,7 +21118,7 @@ var EncoderContext = (
   }()
 );
 
-// node_modules/@zxing/library/esm/core/datamatrix/encoder/X12Encoder.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/encoder/X12Encoder.js
 var __extends70 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -21208,7 +21208,7 @@ var X12Encoder = (
   }(C40Encoder)
 );
 
-// node_modules/@zxing/library/esm/core/datamatrix/encoder/TextEncoder.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/encoder/TextEncoder.js
 var __extends71 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -21295,7 +21295,7 @@ var TextEncoder2 = (
   }(C40Encoder)
 );
 
-// node_modules/@zxing/library/esm/core/datamatrix/encoder/HighLevelEncoder.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/encoder/HighLevelEncoder.js
 var HighLevelEncoder = (
   /** @class */
   function() {
@@ -21578,7 +21578,7 @@ var HighLevelEncoder = (
 );
 var HighLevelEncoder_default = HighLevelEncoder;
 
-// node_modules/@zxing/library/esm/core/common/ECIEncoderSet.js
+// ../../../node_modules/@zxing/library/esm/core/common/ECIEncoderSet.js
 var __values42 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -21741,7 +21741,7 @@ var ECIEncoderSet = (
   }()
 );
 
-// node_modules/@zxing/library/esm/core/common/MinimalECIInput.js
+// ../../../node_modules/@zxing/library/esm/core/common/MinimalECIInput.js
 var COST_PER_ECI = 3;
 var MinimalECIInput = (
   /** @class */
@@ -21918,7 +21918,7 @@ var InputEdge = (
   }()
 );
 
-// node_modules/@zxing/library/esm/core/datamatrix/encoder/MinimalEncoder.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/encoder/MinimalEncoder.js
 var __extends72 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -22656,7 +22656,7 @@ var Input = (
   }(MinimalECIInput)
 );
 
-// node_modules/@zxing/library/esm/core/datamatrix/DataMatrixWriter.js
+// ../../../node_modules/@zxing/library/esm/core/datamatrix/DataMatrixWriter.js
 var DataMatrixWriter = (
   /** @class */
   function() {
@@ -22782,7 +22782,7 @@ var DataMatrixWriter = (
   }()
 );
 
-// node_modules/@zxing/library/esm/core/aztec/encoder/AztecCode.js
+// ../../../node_modules/@zxing/library/esm/core/aztec/encoder/AztecCode.js
 var AztecCode = (
   /** @class */
   function() {
@@ -22823,7 +22823,7 @@ var AztecCode = (
 );
 var AztecCode_default = AztecCode;
 
-// node_modules/@zxing/library/esm/core/util/Collections.js
+// ../../../node_modules/@zxing/library/esm/core/util/Collections.js
 var Collections = (
   /** @class */
   function() {
@@ -22840,7 +22840,7 @@ var Collections = (
 );
 var Collections_default = Collections;
 
-// node_modules/@zxing/library/esm/core/aztec/encoder/Token.js
+// ../../../node_modules/@zxing/library/esm/core/aztec/encoder/Token.js
 var Token = (
   /** @class */
   function() {
@@ -22855,7 +22855,7 @@ var Token = (
 );
 var Token_default = Token;
 
-// node_modules/@zxing/library/esm/core/aztec/encoder/SimpleToken.js
+// ../../../node_modules/@zxing/library/esm/core/aztec/encoder/SimpleToken.js
 var __extends73 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -22905,7 +22905,7 @@ var SimpleToken = (
 );
 var SimpleToken_default = SimpleToken;
 
-// node_modules/@zxing/library/esm/core/aztec/encoder/BinaryShiftToken.js
+// ../../../node_modules/@zxing/library/esm/core/aztec/encoder/BinaryShiftToken.js
 var __extends74 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -22961,7 +22961,7 @@ var BinaryShiftToken = (
 );
 var BinaryShiftToken_default = BinaryShiftToken;
 
-// node_modules/@zxing/library/esm/core/aztec/encoder/TokenHelpers.js
+// ../../../node_modules/@zxing/library/esm/core/aztec/encoder/TokenHelpers.js
 function addBinaryShift(token, start, byteCount) {
   return new BinaryShiftToken_default(token, start, byteCount);
 }
@@ -22969,7 +22969,7 @@ function add(token, value, bitCount) {
   return new SimpleToken_default(token, value, bitCount);
 }
 
-// node_modules/@zxing/library/esm/core/aztec/encoder/EncoderConstants.js
+// ../../../node_modules/@zxing/library/esm/core/aztec/encoder/EncoderConstants.js
 var MODE_NAMES = ["UPPER", "LOWER", "DIGIT", "MIXED", "PUNCT"];
 var MODE_UPPER = 0;
 var MODE_LOWER = 1;
@@ -22978,7 +22978,7 @@ var MODE_MIXED = 3;
 var MODE_PUNCT = 4;
 var EMPTY_TOKEN = new SimpleToken_default(null, 0, 0);
 
-// node_modules/@zxing/library/esm/core/aztec/encoder/LatchTable.js
+// ../../../node_modules/@zxing/library/esm/core/aztec/encoder/LatchTable.js
 var LATCH_TABLE = [Int32Array.from([
   0,
   (5 << 16) + 28,
@@ -23009,7 +23009,7 @@ var LATCH_TABLE = [Int32Array.from([
   // MIXED -> PUNCT
 ]), Int32Array.from([(5 << 16) + 31, (10 << 16) + (31 << 5) + 28, (10 << 16) + (31 << 5) + 30, (10 << 16) + (31 << 5) + 29, 0])];
 
-// node_modules/@zxing/library/esm/core/aztec/encoder/ShiftTable.js
+// ../../../node_modules/@zxing/library/esm/core/aztec/encoder/ShiftTable.js
 var __values44 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -23052,7 +23052,7 @@ function static_SHIFT_TABLE(SHIFT_TABLE2) {
 }
 var SHIFT_TABLE = static_SHIFT_TABLE(Arrays_default.createInt32Array(6, 6));
 
-// node_modules/@zxing/library/esm/core/aztec/encoder/State.js
+// ../../../node_modules/@zxing/library/esm/core/aztec/encoder/State.js
 var __values45 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -23187,7 +23187,7 @@ var State = (
 );
 var State_default = State;
 
-// node_modules/@zxing/library/esm/core/aztec/encoder/CharMap.js
+// ../../../node_modules/@zxing/library/esm/core/aztec/encoder/CharMap.js
 function static_CHAR_MAP(CHAR_MAP2) {
   var spaceCharCode = StringUtils_default.getCharCode(" ");
   var pointCharCode = StringUtils_default.getCharCode(".");
@@ -23226,7 +23226,7 @@ function static_CHAR_MAP(CHAR_MAP2) {
 }
 var CHAR_MAP = static_CHAR_MAP(Arrays_default.createInt32Array(5, 256));
 
-// node_modules/@zxing/library/esm/core/aztec/encoder/HighLevelEncoder.js
+// ../../../node_modules/@zxing/library/esm/core/aztec/encoder/HighLevelEncoder.js
 var __values46 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -23421,7 +23421,7 @@ var HighLevelEncoder2 = (
 );
 var HighLevelEncoder_default2 = HighLevelEncoder2;
 
-// node_modules/@zxing/library/esm/core/aztec/encoder/Encoder.js
+// ../../../node_modules/@zxing/library/esm/core/aztec/encoder/Encoder.js
 var __values47 = function(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
   if (m) return m.call(o);
@@ -23718,7 +23718,7 @@ var Encoder2 = (
 );
 var Encoder_default2 = Encoder2;
 
-// node_modules/@zxing/library/esm/core/aztec/AztecWriter.js
+// ../../../node_modules/@zxing/library/esm/core/aztec/AztecWriter.js
 var AztecWriter = (
   /** @class */
   function() {
@@ -23777,7 +23777,7 @@ var AztecWriter = (
   }()
 );
 
-// node_modules/@zxing/browser/esm/common/HTMLCanvasElementLuminanceSource.js
+// ../../../node_modules/@zxing/browser/esm/common/HTMLCanvasElementLuminanceSource.js
 var __extends75 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -23917,7 +23917,7 @@ var HTMLCanvasElementLuminanceSource2 = (
   }(LuminanceSource_default)
 );
 
-// node_modules/@zxing/browser/esm/common/navigator-utils.js
+// ../../../node_modules/@zxing/browser/esm/common/navigator-utils.js
 function hasNavigator() {
   return typeof navigator !== "undefined";
 }
@@ -23928,7 +23928,7 @@ function canEnumerateDevices() {
   return !!(isMediaDevicesSupported() && navigator.mediaDevices.enumerateDevices);
 }
 
-// node_modules/@zxing/browser/esm/readers/BrowserCodeReader.js
+// ../../../node_modules/@zxing/browser/esm/readers/BrowserCodeReader.js
 var __assign = function() {
   __assign = Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -25033,7 +25033,7 @@ var BrowserCodeReader2 = (
   }()
 );
 
-// node_modules/@zxing/browser/esm/readers/BrowserAztecCodeReader.js
+// ../../../node_modules/@zxing/browser/esm/readers/BrowserAztecCodeReader.js
 var __extends76 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -25065,7 +25065,7 @@ var BrowserAztecCodeReader2 = (
   }(BrowserCodeReader2)
 );
 
-// node_modules/@zxing/browser/esm/readers/BrowserMultiFormatOneDReader.js
+// ../../../node_modules/@zxing/browser/esm/readers/BrowserMultiFormatOneDReader.js
 var __extends77 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -25097,7 +25097,7 @@ var BrowserMultiFormatOneDReader = (
   }(BrowserCodeReader2)
 );
 
-// node_modules/@zxing/browser/esm/readers/BrowserDatamatrixCodeReader.js
+// ../../../node_modules/@zxing/browser/esm/readers/BrowserDatamatrixCodeReader.js
 var __extends78 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -25129,7 +25129,7 @@ var BrowserDatamatrixCodeReader2 = (
   }(BrowserCodeReader2)
 );
 
-// node_modules/@zxing/browser/esm/readers/BrowserMultiFormatReader.js
+// ../../../node_modules/@zxing/browser/esm/readers/BrowserMultiFormatReader.js
 var __extends79 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -25181,7 +25181,7 @@ var BrowserMultiFormatReader2 = (
   }(BrowserCodeReader2)
 );
 
-// node_modules/@zxing/browser/esm/readers/BrowserPDF417Reader.js
+// ../../../node_modules/@zxing/browser/esm/readers/BrowserPDF417Reader.js
 var __extends80 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -25213,7 +25213,7 @@ var BrowserPDF417Reader2 = (
   }(BrowserCodeReader2)
 );
 
-// node_modules/@zxing/browser/esm/readers/BrowserQRCodeReader.js
+// ../../../node_modules/@zxing/browser/esm/readers/BrowserQRCodeReader.js
 var __extends81 = /* @__PURE__ */ function() {
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || {
@@ -25245,7 +25245,7 @@ var BrowserQRCodeReader2 = (
   }(BrowserCodeReader2)
 );
 
-// node_modules/@zxing/browser/esm/writers/BrowserCodeSvgWriter.js
+// ../../../node_modules/@zxing/browser/esm/writers/BrowserCodeSvgWriter.js
 var svgNs = "http://www.w3.org/2000/svg";
 var BrowserCodeSvgWriter = (
   /** @class */
@@ -25336,7 +25336,7 @@ var BrowserCodeSvgWriter = (
   }()
 );
 
-// node_modules/@zxing/browser/esm/writers/BrowserQRCodeSvgWriter.js
+// ../../../node_modules/@zxing/browser/esm/writers/BrowserQRCodeSvgWriter.js
 var svgNs2 = "http://www.w3.org/2000/svg";
 var BrowserQRCodeSvgWriter2 = (
   /** @class */

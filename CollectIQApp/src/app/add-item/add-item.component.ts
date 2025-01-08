@@ -10,11 +10,13 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIcon } from '@angular/material/icon';
 import { ItemService } from '../services/item.service';
+import { ItemTypeService } from '../services/item-type.service';
 import { Router } from '@angular/router';
 import { jwtDecode } from 'jwt-decode';
 import { DecodedToken } from '../models/decoded-token.model';
 import { tap } from 'rxjs/operators';
 import { BarcodeScannerComponent } from '../barcode-scanner/barcode-scanner.component';
+import { ItemType } from '../models/item-type.model';
 
 @Component({
   selector: 'app-add-item',
@@ -38,15 +40,17 @@ export class AddItemComponent implements OnInit{
   itemForm: FormGroup;  
   selectedItemType: string = '';
   userInfo: DecodedToken =  new DecodedToken('', '', '', '', 0, 0, 0, '');
+  itemTypes: ItemType[] = [];
 
   constructor(private fb: FormBuilder, 
-    private itemService: ItemService, 
+    private itemService: ItemService,
+    private itemTypeService: ItemTypeService, 
     private router: Router, 
     private dialog: MatDialog, 
     private dialogRef: MatDialogRef<AddItemComponent>, 
     @Inject(MAT_DIALOG_DATA) public data: { itemType: string }) {
 
-    this.selectedItemType = data.itemType;
+    
     this.itemForm = this.fb.group({
       name: ['', Validators.required],
       brand: ['', Validators.required],
@@ -66,7 +70,13 @@ export class AddItemComponent implements OnInit{
       this.userInfo = jwtDecode<DecodedToken>(token);
       this.itemForm.patchValue({ userId: this.userInfo.UserId});
     }
-    this.addTypeSpecificFields();
+
+    this.itemTypeService.getItemTypes().subscribe(itemTypes => {
+      this.itemTypes = itemTypes;
+      this.selectedItemType = this.itemTypes.find(itemType => itemType.id === this.data.itemType)?.name || '';
+      this.itemForm.patchValue({ itemTypeId: this.data.itemType });
+      this.addTypeSpecificFields();
+    });    
   }
 
   onItemTypeChange() {
@@ -142,7 +152,7 @@ export class AddItemComponent implements OnInit{
             tap(response => {
               console.log('Item created successfully', response);              
               this.dialogRef.close();
-              this.router.navigate(['/items']);
+              this.router.navigate(['/items', this.data.itemType]);
             })
           ).subscribe({
             next: () => {},

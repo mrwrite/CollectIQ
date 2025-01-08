@@ -4,5 +4,6 @@ export class ItemStats {
     type!: string;
     count!: number;
     items: Item[] = [];
+    itemTypeId!: string;
     showItems: boolean = false;
   }
