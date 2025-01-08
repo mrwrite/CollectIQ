@@ -38,7 +38,7 @@
     <!-- Grid Section -->
     <div class="dashboard-grid">
       <mat-grid-list cols="3" rowHeight="350px" gutterSize="16px">
-        <mat-grid-tile *ngFor="let item of items">
+        <mat-grid-tile *ngFor="let item of items" (click)="navigateToItemList(item.type)">
           <mat-card class="dashboard-card">
             <mat-card-header>
               <mat-card-title>{{ item.type }}</mat-card-title>
