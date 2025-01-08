@@ -10,5 +10,8 @@ namespace CollectIQ.Service.Interfaces
     public interface IItemTypeRepository
     {
         Task<ItemType> GetItemTypeByIdAsync(Guid itemTypeId, bool trackChanges);
+        Task<ItemType> GetItemTypeByNameAsync(string itemTypeName, bool trackChanges);
+
+        Task<IEnumerable<ItemType>> GetAllItemTypesAsync(bool trackChanges);
     }
 }

@@ -1,0 +1,38 @@
+.dashboard-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mat-sidenav-container {
+    height: 100vh;
+  }
+  
+  .dashboard-grid {
+    margin-top: 20px;
+    padding: 16px;
+  }
+  
+  .dashboard-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .dashboard-card:hover {
+    transform: scale(1.05);
+  }
+  
+
+  mat-grid-tile {
+    //background: lightblue;
+    border: 1px dashed #ccc;
+  }
+
+  /* ::ng-deep .ngx-charts .gridline-path {
+    stroke: #455066 !important;
+} */
+  

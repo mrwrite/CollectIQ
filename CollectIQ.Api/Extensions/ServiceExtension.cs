@@ -71,6 +71,7 @@ namespace CollectIQ.Api.Extensions
                 map.AddProfile<UserMappingProfile>();               
                 map.AddProfile<RoleMappingProfile>();
                 map.AddProfile<ItemMappingProfile>();
+                map.AddProfile<ItemTypeMappingProfile>();
             });
             services.AddSingleton(mapperConfig.CreateMapper());
         }

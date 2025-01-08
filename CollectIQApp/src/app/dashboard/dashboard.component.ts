@@ -17,13 +17,14 @@ import { DecodedToken } from '../models/decoded-token.model';
 import { jwtDecode } from 'jwt-decode';
 import { groupBy } from 'lodash';
 import { ItemStats } from '../models/item-stats.model';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
   imports: [
     CommonModule,
+    RouterModule,
     MatCardModule,
     MatToolbarModule,
     MatTableModule,
@@ -71,15 +72,20 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  private groupItemsByType(items: any[]): ItemStats[]{
-   const grouped = groupBy(items, 'itemTypeName');
-   return Object.keys(grouped).map(type => ({
-      type,
-      count: grouped[type].length,
-      items: grouped[type],
-      showItems: false
-   }));
+  private groupItemsByType(items: any[]): ItemStats[] {
+    const grouped = groupBy(items, 'itemTypeName');
+    return Object.keys(grouped).map(type => {
+      const itemsOfType = grouped[type];
+      return {
+        type,
+        itemTypeId: itemsOfType[0]?.itemTypeId || null, // Extract `itemTypeId` from the first item in the group
+        count: itemsOfType.length,
+        items: itemsOfType,
+        showItems: false
+      };
+    });
   }
+  
 
   private prepareChartData(): void {
     this.chartData = this.items.map(item => ({
