@@ -1,13 +1,50 @@
 
 <div class="dashboard-grid">
   <mat-grid-list cols="4" rowHeight="2:1" gutterSize="15px">
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-subtitle>Total Item Count</mat-card-subtitle>
+            <mat-card-title>{{totalItemCount}}</mat-card-title>
+            <div class="icon-container">
+              <mat-icon mat-card-sm-image>inventory_2</mat-icon>
+            </div>            
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-footer>
+          <p class="mat-caption"><span class="item-increase">+{{totalItemGrowth}}%</span> than last week</p>
+        </mat-card-footer>
+      </mat-card>      
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-subtitle>Total Amount Spent</mat-card-subtitle>
+            <mat-card-title>{{totalSpending | currency:'USD':'symbol':'1.0-0'}}</mat-card-title>
+            <div class="icon-container">
+              <mat-icon mat-card-sm-image>attach_money</mat-icon>
+            </div>            
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-footer>
+          <p class="mat-caption"><span class="item-increase">+{{totalSpendingGrowth}}%</span> than last week</p>
+        </mat-card-footer>
+      </mat-card>      
+    </mat-grid-tile>
     <mat-grid-tile>3</mat-grid-tile>
     <mat-grid-tile>4</mat-grid-tile>
     <mat-grid-tile colspan="2" rowspan="2">
-      
-        <ngx-charts-bar-vertical
+    <div class="tile-header">
+      <div class="row">
+        Overall item Count
+      </div>
+      <div class="row">
+        <span class="subtitle-header">Test</span>
+      </div>      
+    </div> 
+          <ngx-charts-bar-vertical
           [results]="chartData"
           [scheme]="colorScheme"
           [xAxis]="true"
@@ -15,20 +52,94 @@
           [legend]="false"          
           [barPadding]="20"          
           [animations]="true"
+          [view]="view"
           [showDataLabel]="false"
           [noBarWhenZero]="false"
           [yScaleMax]="yScaleMax">
-        </ngx-charts-bar-vertical>  
-                 
+        </ngx-charts-bar-vertical>                  
     </mat-grid-tile>
-    <mat-grid-tile colspan="2" rowspan="2">6</mat-grid-tile>
-    <mat-grid-tile colspan="3" rowspan="2">7</mat-grid-tile>
-    <mat-grid-tile rowspan="2">8</mat-grid-tile>  
+    <mat-grid-tile colspan="2" rowspan="2">
+      <div class="tile-header">
+        <div class="row">
+          Total Amount Spent Yearly
+        </div>
+        <div class="row">
+          <span class="subtitle-header">Test</span>
+        </div>
+      </div>
+      <ngx-charts-line-chart
+        [results]="lineChartData"
+        [scheme]="colorScheme"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="false"        
+        [animations]="true"
+        [view]="view"
+        [autoScale]="true"
+        [timeline]="false" 
+        [showYAxisLabel]="false"
+        [showXAxisLabel]="false">
+      </ngx-charts-line-chart>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="3" rowspan="2">
+      <mat-card class="recent-items-table">
+        <mat-card-header>
+          <mat-card-title>Recent Purchases</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <table mat-table [dataSource]="recentYearItems" class="mat-elevation-z8 styled-table">
+    
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let item"> {{ item.name }} </td>
+            </ng-container>
+    
+            <!-- Type Column -->
+            <ng-container matColumnDef="itemTypeName">
+              <th mat-header-cell *matHeaderCellDef> Type </th>
+              <td mat-cell *matCellDef="let item"> {{ item.itemTypeName }} </td>
+            </ng-container>
+    
+            <!-- Price Column -->
+            <ng-container matColumnDef="price">
+              <th mat-header-cell *matHeaderCellDef> Price </th>
+              <td mat-cell *matCellDef="let item"> {{ item.price | currency:'USD':'symbol':'1.0-0' }} </td>
+            </ng-container>
+    
+            <!-- Date Column -->
+            <ng-container matColumnDef="dateAcquired">
+              <th mat-header-cell *matHeaderCellDef> Date </th>
+              <td mat-cell *matCellDef="let item"> {{ item.dateAcquired | date:'mediumDate' }} </td>
+            </ng-container>
+    
+            <!-- Header and Row Definitions -->
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile rowspan="2">
+      <mat-card class="timeline-card">
+        <mat-card-header>
+          <mat-card-title class="timeline-title">Recent Items</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <ul class="timeline">
+            <li *ngFor="let item of recentItems">
+              <span class="timeline-date">{{ item.dateAcquired | date: 'mediumDate' }}</span>
+              <p class="timeline-item-name">{{ item.name }}</p>
+              <p class="timeline-item-details">{{ item.itemTypeName }} - {{ item.price | currency:'USD':'symbol':'1.0-0' }}</p>
+            </li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>  
   </mat-grid-list>
 </div>
 
-
-  <div class="dashboard-grid">
+  <!-- <div class="dashboard-grid">
     <mat-grid-list cols="3" rowHeight="350px" gutterSize="16px">
       <mat-grid-tile *ngFor="let item of items" (click)="navigateToItemList(item.itemTypeId)">
         <mat-card class="dashboard-card">
@@ -44,4 +155,4 @@
         </mat-card>
       </mat-grid-tile>
     </mat-grid-list>
-  </div>
+  </div> -->
