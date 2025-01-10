@@ -1,38 +1,258 @@
 .dashboard-container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .mat-sidenav-container {
-    height: 100vh;
-  }
-  
-  .dashboard-grid {
-    margin-top: 20px;
-    padding: 16px;
-  }
-  
-  .dashboard-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: transform 0.2s;
-  }
-  
-  .dashboard-card:hover {
-    transform: scale(1.05);
-  }
-  
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
-  mat-grid-tile {
-    //background: lightblue;
-    border: 1px dashed #ccc;
+.mat-sidenav-container {
+  height: 100vh;
+}
+
+.dashboard-grid {
+  margin-top: 20px;
+  padding: 16px;
+}
+
+mat-grid-tile {
+  padding: 0; /* Remove padding to ensure no extra space around the card */
+  border: 1px solid rgba(204,204,204,0.5); /* Add border to separate tiles */
+  border-radius: 12px;  
+  display: flex; /* Ensure tile behaves like a flex container */
+  align-items: stretch; /* Stretch child elements to fill the tile vertically */
+  justify-content: stretch; /* Stretch child elements to fill the tile horizontally */
+}
+
+mat-card {
+  width: 100%; /* Ensure the card fills the tile horizontally */
+  height: 100%; /* Ensure the card fills the tile vertically */
+  display: flex;
+  flex-direction: column; /* Arrange content inside the card in a column */
+  justify-content: space-between; /* Space content inside the card evenly */
+  //box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  //border-radius: 12px;
+  padding: 5px;
+  //transition: transform 0.2s;
+  background: #fff;
+  border: none !important;
+}
+
+mat-card:hover {
+  //transform: scale(1.05);
+}
+
+.mat-card-title-group {
+  display: flex; /* Enable flexbox for alignment */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between; /* Push the icon to the right */
+  width: 100%; /* Ensure the title group fills the card horizontally */
+}
+
+.text-content {
+  flex-grow: 1; /* Allow text content to grow and fill the space */
+  display: flex;
+  flex-direction: column; /* Stack subtitle and title */
+}
+
+.icon-container {
+  display: flex;
+  align-items: center; /* Vertically align the icon */
+  justify-content: flex-end; /* Align icon to the right */
+  margin-left: auto;
+}
+
+.icon-container mat-icon {
+  font-size: 50px !important; /* Optional: Adjust the icon size */
+  color: #464646; /* Optional: Adjust icon color */
+  justify-content: flex-end !important;
+  //margin-top: -10px;
+  
+}
+
+.mat-caption {
+  font-size: 15px !important;
+  font-weight: lighter !important;
+  color: #808080 !important;
+}
+mat-card-header {
+  align-items: flex-start;
+}
+
+mat-card-footer {
+  padding: 10px;
+  margin-top: auto; /* Push footer to the bottom of the card */
+}
+
+.dashboard-grid mat-card-title {
+  font-size: 40px !important;
+  font-weight: bold;  
+}
+
+.dashboard-grid mat-card-subtitle {
+  font-size: 18px !important;
+  font-weight: lighter;
+  color: #808080;
+  padding-bottom: 10px;
+}
+
+.item-increase{
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.tile-header {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.subtitle-header {
+  font-size: 12px;
+  font-weight: normal;
+  color: #808080;
+}
+
+ngx-charts-bar-vertical {
+  margin-top: 10px; /* Adjust margin to avoid overlap with the header */
+}
+
+ngx-charts-line-chart {
+  margin-top: 10px; /* Avoid overlap with the header */
+}
+
+::ng-deep .ngx-charts .gridline-path {
+  stroke: #757575 !important;
+}
+
+/* Target X-axis tick labels */
+g.axis.x text {
+  fill: #666666 !important;
+}
+
+/* Target Y-axis tick labels */
+g.axis.y text {
+  fill: #666666 !important;
+}
+
+.timeline-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+
+  mat-card-header {
+    padding-bottom: 0 !important; /* Reduce space below the header */
   }
 
-  /* ::ng-deep .ngx-charts .gridline-path {
-    stroke: #455066 !important;
-} */
+  mat-card-title {
+    font-size: 20px; /* Adjust title size */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove default padding */
+    line-height: 1.2; /* Adjust line-height for tighter spacing */
+  }
+
+  mat-card-content {
+    padding: 8px 0 0 !important; /* Reduce top padding to bring the list closer */
+    flex-grow: 1; /* Make content fill available space */
+  }
   
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.timeline li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ccc;
+}
+
+.timeline li:last-child::before {
+  bottom: 50%;
+}
+
+.timeline-date {
+  font-size: 14px;
+  color: #888888;
+}
+
+
+
+.timeline-card mat-card-title {
+  font-size: 16px !important;
+  font-weight: bold;
+  margin: 0;
+}
+
+.timeline-item-details {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.timeline-item-name{
+  margin: 0 !important;
+}
+
+.timeline-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.recent-items-table {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  mat-card-header {
+    padding-bottom: 0;
+  }
+
+  mat-card-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  mat-card-content {
+    padding-top: 8px;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+
+  table {
+    width: 100%;
+    border-spacing: 0;
+
+    th {
+      font-weight: bold;
+      text-align: left;
+    }
+
+    td {
+      text-align: left;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+  }
+}
+
